@@ -26,5 +26,6 @@ nombre nombreDeCelda(celda c);
 int filaDeNombre(nombre n);
 int columnaDeNombre(nombre n);
 celda buscoCeldaDeUnViaje(tuple<tiempo, gps> v, grilla g);
+bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf);
 
 #endif //TRANSPORTEURBANO_AUXILIARES_H

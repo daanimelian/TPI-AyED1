@@ -10,7 +10,6 @@ using namespace std;
 /******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
 tiempo tiempoTotal(viaje v) {
     tiempo t = maxTiempo(v) - minTiempo(v);
-
     return t;
 }
 
@@ -22,7 +21,6 @@ distancia distanciaTotal(viaje v) {
         d = d + (distEnKM(obtenerPosicion(v[i]), obtenerPosicion(buscoSiguientePunto(v, v[i]))));
         i = i +1;
     }
-
     return d;
 }
 
@@ -42,7 +40,7 @@ bool excesoDeVelocidad(viaje v) {
 
 /************************************ EJERCICIO recorridoCubierto *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
-    vector<gps> resp;
+    vector<gps> resp = {};
     int i = 0; int k = 0; bool estaDentro = false;
     while (k < r.size()){
         while (i < v.size()){
@@ -58,23 +56,18 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
         k = k + 1;
         estaDentro = false;
     }
-
     return resp;
 }
 
 /***************************************** EJERCICIO flota ***************************************/
 int flota(vector<viaje> f, tiempo t0, tiempo tf) {
-    int resp;
+    int resp = 0;
     int i = 0;
     while (i < f.size()){
-        if ((minTiempo(f[i]) > t0 && maxTiempo(f[i]) < tf)
-            || (minTiempo(f[i]) < t0 && maxTiempo(f[i]) > t0 )
-            || (minTiempo(f[i]) < tf && maxTiempo(f[i]) > tf)
-            || (minTiempo(f[i]) < t0 && maxTiempo(f[i]) > tf)) // achicar esto
+        if (viajeEnFranjaHoraria(f[i], t0, tf)) // achicar esto
             resp = resp + 1;
         i = i + 1 ;
     }
-
     return resp;
 }
 
@@ -89,9 +82,9 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
     while(k < n+1){
         while (j < m+1) {
             a = {(maxlatitud - ((k - 1) * ((maxlatitud - minlatitud) / n))),
-                 (minlongitud + ((j - 1)* ((maxlongitud - maxlongitud) / m)))};
+                 (minlongitud + ((j - 1)* ((maxlongitud - minlongitud) / m)))};
             b = {(maxlatitud - k * ((maxlatitud - minlatitud) / n)),
-                 (minlongitud + (j * ((maxlongitud - maxlongitud) / m)))};
+                 (minlongitud + ((j * ((maxlongitud - minlongitud)) / m)))};
             c = {a, b, {k, j}};
             resp.push_back(c);
             j = j + 1;
@@ -99,8 +92,6 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
         k = k + 1;
         j = 1;
     }
-    return resp;
-
     return resp;
 }
 
@@ -117,7 +108,6 @@ int cantidadDeSaltos(grilla g, viaje v) {
         i = i + 1;
     }
     return resp;
-
 }
 
 

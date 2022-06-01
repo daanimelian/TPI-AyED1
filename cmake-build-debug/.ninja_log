@@ -1,0 +1,17 @@
+# ninja log v5
+2	590	6758248146880276	CMakeFiles/tpi.dir/ejercicios.obj	774aee28a8124595
+9	847	6758247879346515	CMakeFiles/tpi.dir/auxiliares.obj	f6148e043623b38a
+2	820	6758247879086459	CMakeFiles/tpi.dir/main.obj	75ae88f1b5ca5fb2
+32	928	6758240503963592	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	13e2d8a32e12f03a
+13	945	6758247880336747	CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.obj	73569ef426ad822f
+17	963	6758247880506777	CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.obj	2bddd54b85404e26
+14	1036	6758247881246944	CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.obj	2c74301b8385816b
+25	980	6758247880676815	CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.obj	5e4cd73f46bfc3e3
+15	1035	6758247881236936	CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.obj	326addd741a1735a
+11	1003	6758247880906871	CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.obj	a590e3718eb83021
+22	1042	6758247881296952	CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj	c95d04bb1a6de077
+20	1122	6758247882107132	CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj	653367f13da52b44
+30	4408	6758240538711391	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	e4823ef47c4aa28a
+4409	5458	6758240549283766	lib/googletest-master/googlemock/gtest/libgtestd.a	7b14ffc5e8016962
+5458	5492	6758240549623839	lib/googletest-master/googlemock/gtest/libgtest_maind.a	87f00d77c9d32b43
+590	1933	6758248160272731	../tpi.exe	46dc882ea713e937

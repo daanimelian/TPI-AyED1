@@ -19,7 +19,7 @@ distancia distanciaTotal(viaje v) {
     int i = 0;
     while (i < v.size()){
         d = d + (distEnKM(obtenerPosicion(v[i]), obtenerPosicion(buscoSiguientePunto(v, v[i]))));
-        i = i +1;
+        i++;
     }
     return d;
 }
@@ -33,7 +33,7 @@ bool excesoDeVelocidad(viaje v) {
             resp = true;
             i = v.size();
         }
-        i = i +1;
+        i++;
     }
     return resp;
 }
@@ -48,12 +48,13 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
                 estaDentro = true;
                 i = v.size();
             }
-            i = i + 1;
+           i++;
         }
-        if (!estaDentro)
+        if (!estaDentro){
             resp.push_back(r[k]);
+        }
         i = 0;
-        k = k + 1;
+        k ++ ;
         estaDentro = false;
     }
     return resp;
@@ -113,7 +114,7 @@ int cantidadDeSaltos(grilla g, viaje v) {
 
 /************************************* EJERCICIO corregirViaje ******************************/
 void corregirViaje(viaje& v, vector<tiempo> errores){
-    // codig
+
 
     return;
 }

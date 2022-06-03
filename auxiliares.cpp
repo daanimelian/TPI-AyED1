@@ -10,16 +10,6 @@ using namespace std;
 const double pi = 3.14;
 double radioTierra = 6378;
 
-bool gpsValido(gps posicion){
-    bool es_valido = false;
-    double latitud = obtenerLatitud(posicion);
-    double longitud = obtenerLongitud(posicion);
-    if ((-90<=latitud && latitud<=90) && (-180<=longitud && longitud<=180) ){
-
-        es_valido = true;
-    }
-    return es_valido;
-}
 double obtenerLatitud(gps posicion) {
     return get<0>(posicion);
 }
@@ -217,162 +207,85 @@ bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
     return res;
 }
 
-bool gpsCorrecto(viaje v, int i, vector<tiempo> errores){
-    bool es_correcto = true;
-    int j = 0;
-    while (j < errores.size() && es_correcto){
-        if (errores[j] == get<0>(v[i])){
-            es_correcto = false;
-        }
-    }
-    return es_correcto;
-}
+//ejercicio 8
 
-bool gpsSobreRecta(gps x, gps a, gps b){
-    bool esta = false;
-    double recta = (((get<1>(a) - get<1>(b)) / (get<0>(a) - get<0>(b))) * get<0>(x)) + (((get<1>(b)*get<0>(a)) - (get<1>(a)*get<0>(b))) / (get<0>(a) - get<0>(b)));
-    if ((get<0>(a) != get<0>(b) && (get<1>(x) == recta)) || ((get<0>(a) == get<0>(b)) && (get<1>(a) == get<1>(b)))){
-        esta = true;
-    }
-    return esta;
-}
-
-bool losDosPuntosMasCercanos(viaje v, int k, int p, int q){
-    bool mas_cercano = true;
+int puntoACorregir(viaje v, tiempo error){
     int i = 0;
-
-    while (i < v.size() && mas_cercano){
-        if ((i != k) && (i !=  p) && (i !=  q)){
-            if (!((distEnKM(obtenerPosicion(v[i]), obtenerPosicion(v[k])) > distEnKM(obtenerPosicion(v[p]), obtenerPosicion(v[k]))) && (distEnKM(obtenerPosicion(v[i]), obtenerPosicion(v[k])) > distEnKM(obtenerPosicion(v[q]), obtenerPosicion(v[k])))  )){
-                mas_cercano = false;
-            }
-        }
-        i ++;
-    }
-
-    return  mas_cercano;
-}
-
-bool moduloCorrectoProporcionaVelocidad(viaje v, int k, int p, int q){
-    bool proporciona_velocidad = false;
-    double dis_entre_k_p = distEnKM(obtenerPosicion(v[k]), obtenerPosicion(v[p]));
-    double dis_entre_p_q = distEnKM(obtenerPosicion(v[p]), obtenerPosicion(v[q]));
-    double tiempo = (obtenerTiempo(v[k]) - obtenerTiempo(v[q]))/(obtenerTiempo(v[k]) - obtenerTiempo(v[p]));
-    if (dis_entre_k_p == (dis_entre_p_q * tiempo)){
-        proporciona_velocidad = true;
-    }
-    return proporciona_velocidad;
-}
-
-bool correctoRespectoPivot(tiempo tp, tiempo tk, int xp, int xk){
-    bool correcto= false;
-
-    if (abs(tp -tk) == abs(xp - xk)){
-        correcto = true;
-    }
-
-    return correcto;
-}
-bool noEstaEnErrores(tiempo t, vector<tiempo> errores){
-    bool esta = false;
-    int i = 0;
-    while ( (i < errores.size()) && !esta){
-        if (t == errores[i]){
-            esta = true;
-        }
-    }
-    return  esta;
-}
-
-bool losCorrectosNoCambian(viaje v, viaje v_prev, vector<tiempo> errores){
-    bool no_cambia;
-    int i =0;
-    while (i < v.size() && no_cambia) {
-        if ((v[i] == v_prev[i]) && noEstaEnErrores(obtenerTiempo(v_prev[i]), errores)){
-            no_cambia = true;
-        } else{
-            no_cambia = false;
-        }
-
-        i++;
-    }
-
-    return no_cambia;
-}
-
-bool posicionEnInstanteT(tuple<tiempo, gps> v, tiempo t){
-    bool en_posicion = false;
-    if (obtenerTiempo(v) == t){
-        en_posicion = true;
-    }
-
-    return en_posicion;
-}
-bool correctoEnRectaVertical(viaje v, int k, int p, int q){
-    gps posicion_p = obtenerPosicion(v[p]);
-    gps posicion_q = obtenerPosicion(v[q]);
-    gps posicion_k = obtenerPosicion(v[k]);
-    return ((obtenerLatitud(posicion_p) == obtenerLatitud(posicion_q)) && correctoRespectoPivot(obtenerTiempo(v[p]),obtenerTiempo(v[k]), obtenerLongitud(posicion_p), obtenerLongitud(posicion_k)));
-
-}
-bool correctoEnRectaOrdinaria(viaje v, int k, int p, int q) {
-    gps posicion_p = obtenerPosicion(v[p]);
-    gps posicion_q = obtenerPosicion(v[q]);
-    gps posicion_k = obtenerPosicion(v[k]);
-    return ((obtenerLatitud(posicion_p) < obtenerLatitud(posicion_q)) && correctoRespectoPivot(obtenerTiempo(v[p]),obtenerTiempo(v[k]),
-                                                                                  obtenerLatitud(posicion_p), obtenerLatitud(posicion_k)));
-}
-bool posicionCorrectaEnRecta(viaje v, int k, int p, int q){
-    return correctoEnRectaOrdinaria(v,k,p,q) || correctoEnRectaVertical(v,k,p,q);
-}
-bool gpsProporcionalVelocidad(viaje v, int k, int p, int q){
-    return moduloCorrectoProporcionaVelocidad(v,k,p,q) && posicionCorrectaEnRecta(v,k,p,q);
-}
-tuple<tiempo, gps> puntoCorrespondienteAError(viaje v, tiempo error){
-
-    tuple<tiempo,gps> punto;
-
-    for (int i = 0; i < v.size(); ++i) {
-
+    bool encontrado = false;
+    while (i < v.size() && !encontrado){
         if (obtenerTiempo(v[i]) == error){
-            punto = v[i];
+            encontrado = true;
         }
     }
-    return punto;
+    return i;
 }
-bool gpsCorregido(tuple<tiempo,gps> punto, viaje v, vector<tiempo> errores){
-    int k;
-    bool esta_corregido = false;
 
-    for (int i = 0; i < v.size(); ++i) {
-        if(v[i] == punto){
-            k = i;
+
+
+tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v){
+    tuple<tiempo, gps> res;
+    int i=0;
+    double t_ant = obtenerTiempo(v[0]);
+    double t_ref = obtenerTiempo(punto);
+    while (i<v.size()){
+        i++;
+        if ((obtenerTiempo(v[i]) < t_ref) && (obtenerTiempo(v[i]) > t_ant)){
+            t_ant = obtenerTiempo(v[i]);
+            res = v[i];
+            }
+        }
+
+    return res;
+}
+
+tuple<tiempo, gps>  puntoInmediatoPosterior(tuple<tiempo, gps> punto, viaje v){
+    tuple<tiempo, gps> res;
+    int i=0;
+    double t_post = obtenerTiempo(v[0]);
+    double t_ref = obtenerTiempo(punto);
+    while (i<v.size()){
+        i++;
+        if ((obtenerTiempo(v[i]) > t_ref) && (obtenerTiempo(v[i]) < t_post)){
+            t_post = obtenerTiempo(v[i]);
+            res = v[i];
         }
     }
 
-    for (int i = 0; i < v.size() && !esta_corregido; ++i) {
-        for (int j = 0; j < v.size() && !esta_corregido; ++j) {
-            if (losDosPuntosMasCercanos(v, k, i, j) && gpsCorrecto(v,i,errores) && gpsCorrecto(v,j,errores) && gpsSobreRecta(obtenerPosicion(punto), obtenerPosicion(v[i]), obtenerPosicion(v[j])) &&
-                    gpsProporcionalVelocidad(v, k, i, j)){
-                    esta_corregido = true;
+    return res;
+}
+
+gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b){
+    gps gps_a = obtenerPosicion(punto_a);
+    gps gps_b = obtenerPosicion(punto_b);
+    double latitud;
+    double longitud;
+    for (int i = obtenerLatitud(gps_a); i < obtenerLatitud(gps_b) ; ++i) {
+        for (int j = obtenerLongitud(gps_a); j < obtenerLongitud(gps_b) ; ++j) {
+
+            if (obtenerLatitud(gps_a) != obtenerLatitud(gps_b)){
+                if(estaSobreRecta(i,j,gps_a,gps_b)){
+                    latitud = i;
+                    longitud = j;
+                }
+            }
+            else if ((obtenerLatitud(gps_a) == obtenerLatitud(gps_b)) && (j != obtenerLongitud(gps_a))&& (j != obtenerLongitud(gps_b))){
+                latitud = obtenerLatitud(gps_a);
+                longitud = j;
+
+
             }
         }
 
     }
-    return esta_corregido;
-}
-bool todosErroresCorregidos(viaje v, vector<tiempo> errores){
-    bool corregido = true;
-    int i = 0;
-   while( i < errores.size() && corregido) {
-        tuple<tiempo,gps> punto = puntoCorrespondienteAError(v, errores[i]);
-       if (!(posicionEnInstanteT(punto, errores[i]) && gpsCorregido(punto, errores) && gpsValido(obtenerPosicion(punto)))){
-             corregido = false;
-       }
 
-       i++;
-    }
-   return corregido;
+    return make_tuple(latitud, longitud);
+
 }
 
+bool estaSobreRecta(double x, double y, gps a, gps b){
+    double pendiente = ((obtenerLongitud(a)- obtenerLongitud(b))/(obtenerLatitud(a)- obtenerLatitud(b)));
+    double ordenada = (((obtenerLatitud(a)*obtenerLongitud(b)) - (obtenerLatitud(b)*obtenerLongitud(a))) / (obtenerLatitud(a)- obtenerLatitud(b)));
+    double res = (ordenada*x) + pendiente;
+    return y == res;
+}
 

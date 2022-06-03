@@ -28,4 +28,9 @@ int columnaDeNombre(nombre n);
 celda buscoCeldaDeUnViaje(tuple<tiempo, gps> v, grilla g);
 bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf);
 
+int puntoACorregir(viaje v, tiempo error);
+tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v);
+tuple<tiempo, gps> puntoInmediatoPosterior(tuple<tiempo, gps> punto, viaje v);
+gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b);
+bool estaSobreRecta(double x, double y, gps a, gps b);
 #endif //TRANSPORTEURBANO_AUXILIARES_H

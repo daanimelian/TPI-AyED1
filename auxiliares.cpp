@@ -210,9 +210,10 @@ bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
 //ejercicio 8
 
 int puntoACorregir(viaje v, tiempo error){
-    int i = 0;
+    int i = -1;
     bool encontrado = false;
     while (i < v.size() && !encontrado){
+        i++;
         if (obtenerTiempo(v[i]) == error){
             encontrado = true;
         }
@@ -221,15 +222,14 @@ int puntoACorregir(viaje v, tiempo error){
 }
 
 
-
-tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v){
+tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v, vector<tiempo> errores){
     tuple<tiempo, gps> res;
     int i=0;
     double t_ant = obtenerTiempo(v[0]);
     double t_ref = obtenerTiempo(punto);
     while (i<v.size()){
         i++;
-        if ((obtenerTiempo(v[i]) < t_ref) && (obtenerTiempo(v[i]) > t_ant)){
+        if ((obtenerTiempo(v[i]) < t_ref) && (obtenerTiempo(v[i]) > t_ant) && !tieneError(v[i], errores)){
             t_ant = obtenerTiempo(v[i]);
             res = v[i];
             }
@@ -238,14 +238,14 @@ tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v){
     return res;
 }
 
-tuple<tiempo, gps>  puntoInmediatoPosterior(tuple<tiempo, gps> punto, viaje v){
+tuple<tiempo, gps>  puntoInmediatoPosterior(tuple<tiempo, gps> punto, viaje v, vector<tiempo> errores){
     tuple<tiempo, gps> res;
     int i=0;
     double t_post = obtenerTiempo(v[0]);
     double t_ref = obtenerTiempo(punto);
     while (i<v.size()){
         i++;
-        if ((obtenerTiempo(v[i]) > t_ref) && (obtenerTiempo(v[i]) < t_post)){
+        if ((obtenerTiempo(v[i]) > t_ref) && (obtenerTiempo(v[i]) < t_post) && !tieneError(v[i], errores)){
             t_post = obtenerTiempo(v[i]);
             res = v[i];
         }
@@ -254,29 +254,23 @@ tuple<tiempo, gps>  puntoInmediatoPosterior(tuple<tiempo, gps> punto, viaje v){
     return res;
 }
 
-gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b){
-    gps gps_a = obtenerPosicion(punto_a);
-    gps gps_b = obtenerPosicion(punto_b);
-    double latitud;
-    double longitud;
-    for (int i = obtenerLatitud(gps_a); i < obtenerLatitud(gps_b) ; ++i) {
-        for (int j = obtenerLongitud(gps_a); j < obtenerLongitud(gps_b) ; ++j) {
+bool tieneError(tuple<tiempo,gps> punto, vector<tiempo> errores){
+    bool hay_error = false;
 
-            if (obtenerLatitud(gps_a) != obtenerLatitud(gps_b)){
-                if(estaSobreRecta(i,j,gps_a,gps_b)){
-                    latitud = i;
-                    longitud = j;
-                }
-            }
-            else if ((obtenerLatitud(gps_a) == obtenerLatitud(gps_b)) && (j != obtenerLongitud(gps_a))&& (j != obtenerLongitud(gps_b))){
-                latitud = obtenerLatitud(gps_a);
-                longitud = j;
-
-
-            }
+    for (int i = 0; i < errores.size(); ++i) {
+        if (errores[i] == obtenerTiempo(punto)){
+            hay_error = true;
         }
-
     }
+    return hay_error;
+}
+
+gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b, tiempo tp_error){
+    double latitud, longitud;
+    float vel_media = velocidad(punto_a, punto_b);
+
+    latitud = obtenerLatitud(obtenerPosicion(punto_a)) + (tp_error * vel_media);
+    longitud = obtenerLongitud(obtenerPosicion(punto_a)) + (tp_error * vel_media);
 
     return make_tuple(latitud, longitud);
 

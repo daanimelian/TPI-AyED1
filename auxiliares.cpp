@@ -210,15 +210,17 @@ bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
 //ejercicio 8
 
 int puntoACorregir(viaje v, tiempo error){
-    int i = -1;
+    int i = 0;
+    int indice;
     bool encontrado = false;
     while (i < v.size() && !encontrado){
-        i++;
         if (obtenerTiempo(v[i]) == error){
             encontrado = true;
+            indice = i;
         }
+        i++;
     }
-    return i;
+    return indice;
 }
 
 
@@ -264,13 +266,19 @@ bool tieneError(tuple<tiempo,gps> punto, vector<tiempo> errores){
     }
     return hay_error;
 }
+double velocidadMedia(tiempo tiempo_a, tiempo tiempo_b, double a, double b){
+    double velocidad;
+    velocidad = (b-a)/(tiempo_b-tiempo_a);
+
+    return  velocidad;
+}
 
 gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b, tiempo tp_error){
     double latitud, longitud;
-    float vel_media = velocidad(punto_a, punto_b);
-
-    latitud = obtenerLatitud(obtenerPosicion(punto_a)) + (tp_error * vel_media);
-    longitud = obtenerLongitud(obtenerPosicion(punto_a)) + (tp_error * vel_media);
+    double vel_media_lat = velocidadMedia(obtenerTiempo(punto_a), obtenerTiempo(punto_b), obtenerLatitud(obtenerPosicion(punto_a)),  obtenerLatitud(obtenerPosicion(punto_b)));
+    double vel_media_long = velocidadMedia(obtenerTiempo(punto_a), obtenerTiempo(punto_b), obtenerLongitud(obtenerPosicion(punto_a)),  obtenerLongitud(obtenerPosicion(punto_b)));
+    latitud = (tp_error- obtenerTiempo(punto_a))*vel_media_lat + obtenerLatitud(obtenerPosicion(punto_a));
+    longitud = (tp_error- obtenerTiempo(punto_a))*vel_media_long + obtenerLongitud(obtenerPosicion(punto_a));
 
     return make_tuple(latitud, longitud);
 

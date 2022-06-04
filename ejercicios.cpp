@@ -114,13 +114,25 @@ int cantidadDeSaltos(grilla g, viaje v) {
 
 /************************************* EJERCICIO corregirViaje ******************************/
 void corregirViaje(viaje& v, vector<tiempo> errores){
-
+    tuple<tiempo, gps> punto_a, punto_b;
+    gps gps_corregido;
     for (int i = 0; i < errores.size(); ++i) {
         int indice = puntoACorregir(v, errores[i]);
-        tuple<tiempo, gps> anterior = puntoInmediatoAnterior(v[indice], v, errores);
-        tuple<tiempo, gps> posterior = puntoInmediatoPosterior(v[indice], v, errores);
-
-        gps gps_corregido = gpsSobreRecta(anterior, posterior, errores[i]);
+        std::cout << indice << std::endl;
+        if ((indice !=0) && (indice != v.size()-1)){
+            punto_a = puntoInmediatoAnterior(v[indice], v, errores);
+            punto_b = puntoInmediatoPosterior(v[indice], v, errores);
+            gps_corregido = gpsSobreRecta(punto_a, punto_b, errores[i]);
+        }
+        else if (indice == 0){
+            punto_a  = puntoInmediatoPosterior(v[indice], v, errores);
+            punto_b  = puntoInmediatoPosterior(punto_a, v, errores);
+            gps_corregido = gpsSobreRecta(punto_a, punto_b, errores[i]);
+        } else{
+            punto_a = puntoInmediatoAnterior(v[indice], v, errores);
+            punto_b = puntoInmediatoAnterior(punto_a, v, errores);
+            gps_corregido = gpsSobreRecta(punto_a, punto_b, errores[i]);
+        }
 
         v[indice] = make_tuple(errores[i], gps_corregido);
     }

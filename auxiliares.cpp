@@ -145,7 +145,14 @@ tiempo minTiempo (viaje v){
 tuple<tiempo,gps> buscoSiguientePunto(viaje v, tuple <tiempo, gps> tup){
     if (maxTiempo(v) == obtenerTiempo(tup))
         return tup;
-    int i = 0; tuple<tiempo, gps> res = v[v.size()-1];
+    int i = 0; int k = 0; tuple<tiempo, gps> res;
+    while (k < v.size()){
+     if (obtenerTiempo(v[k]) == maxTiempo(v)) {
+         res = v[k];
+         k = v.size();
+     }   
+     k = k + 1;
+    }
     while (i < v.size()){
         if (obtenerTiempo(v[i]) > obtenerTiempo(tup) && obtenerTiempo(v[i]) < obtenerTiempo(res))
             res = v[i];
@@ -193,6 +200,7 @@ celda buscoCeldaDeUnViaje(tuple<tiempo, gps> v, grilla g){
     }
     return c;
 }
+
 bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
     bool res;
     if ((minTiempo(v) > t0 && maxTiempo(v) < tf)

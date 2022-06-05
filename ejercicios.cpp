@@ -10,7 +10,6 @@ using namespace std;
 /******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
 tiempo tiempoTotal(viaje v) {
     tiempo t = maxTiempo(v) - minTiempo(v);
-
     return t;
 }
 
@@ -20,9 +19,8 @@ distancia distanciaTotal(viaje v) {
     int i = 0;
     while (i < v.size()){
         d = d + (distEnKM(obtenerPosicion(v[i]), obtenerPosicion(buscoSiguientePunto(v, v[i]))));
-        i = i +1;
+        i++;
     }
-
     return d;
 }
 
@@ -35,14 +33,14 @@ bool excesoDeVelocidad(viaje v) {
             resp = true;
             i = v.size();
         }
-        i = i +1;
+        i++;
     }
     return resp;
 }
 
 /************************************ EJERCICIO recorridoCubierto *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
-    vector<gps> resp;
+    vector<gps> resp = {};
     int i = 0; int k = 0; bool estaDentro = false;
     while (k < r.size()){
         while (i < v.size()){
@@ -50,31 +48,27 @@ vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
                 estaDentro = true;
                 i = v.size();
             }
-            i = i + 1;
+           i++;
         }
-        if (!estaDentro)
+        if (!estaDentro){
             resp.push_back(r[k]);
+        }
         i = 0;
-        k = k + 1;
+        k ++ ;
         estaDentro = false;
     }
-
     return resp;
 }
 
 /***************************************** EJERCICIO flota ***************************************/
 int flota(vector<viaje> f, tiempo t0, tiempo tf) {
-    int resp;
+    int resp = 0;
     int i = 0;
     while (i < f.size()){
-        if ((minTiempo(f[i]) > t0 && maxTiempo(f[i]) < tf)
-            || (minTiempo(f[i]) < t0 && maxTiempo(f[i]) > t0 )
-            || (minTiempo(f[i]) < tf && maxTiempo(f[i]) > tf)
-            || (minTiempo(f[i]) < t0 && maxTiempo(f[i]) > tf)) // achicar esto
+        if (viajeEnFranjaHoraria(f[i], t0, tf)) // achicar esto
             resp = resp + 1;
         i = i + 1 ;
     }
-
     return resp;
 }
 
@@ -99,7 +93,7 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
         k = k + 1;
         j = 1;
     }
-    
+
     return resp;
 }
 
@@ -121,7 +115,27 @@ int resp = 0; int i = 0;
 
 /************************************* EJERCICIO corregirViaje ******************************/
 void corregirViaje(viaje& v, vector<tiempo> errores){
-    // codig
+    tuple<tiempo, gps> punto_a, punto_b;
+    gps gps_corregido;
+    for (int i = 0; i < errores.size(); ++i) {
+        int indice = puntoACorregir(v, errores[i]);
+        std::cout << indice << std::endl;
+        if ((indice !=0) && (indice != v.size()-1)){
+            punto_a = puntoInmediatoAnterior(v[indice], v, errores);
+            punto_b = puntoInmediatoPosterior(v[indice], v, errores);
+            gps_corregido = gpsSobreRecta(punto_a, punto_b, errores[i]);
+        }
+        else if (indice == 0){
+            punto_a  = puntoInmediatoPosterior(v[indice], v, errores);
+            punto_b  = puntoInmediatoPosterior(punto_a, v, errores);
+            gps_corregido = gpsSobreRecta(punto_a, punto_b, errores[i]);
+        } else{
+            punto_a = puntoInmediatoAnterior(v[indice], v, errores);
+            punto_b = puntoInmediatoAnterior(punto_a, v, errores);
+            gps_corregido = gpsSobreRecta(punto_a, punto_b, errores[i]);
+        }
 
+        v[indice] = make_tuple(errores[i], gps_corregido);
+    }
     return;
 }

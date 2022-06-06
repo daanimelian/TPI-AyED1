@@ -63,3 +63,15 @@
 3	601	6759803053410518	CMakeFiles/tpi.dir/ejercicios.obj	17db0ad17bcfeca
 3	568	6759803318710922	CMakeFiles/tpi.dir/ejercicios.obj	17db0ad17bcfeca
 568	1905	6759803332042788	../tpi.exe	46dc882ea713e937
+11	961	6760882006011091	CMakeFiles/tpi.dir/main.obj	21ecdef3f7ac16b2
+2	1009	6760882006501199	CMakeFiles/tpi.dir/auxiliares.obj	2dadba1c9344a19f
+16	1020	6760882006611222	CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.obj	41a2a3dc225ea88
+13	1039	6760882006771263	CMakeFiles/tpi.dir/ejercicios.obj	17db0ad17bcfeca
+21	1070	6760882007111335	CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.obj	4cb58b337348995
+18	1074	6760882007151359	CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.obj	6a1244f1ce972879
+17	1092	6760882007331387	CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.obj	6969f3a2166eeaf3
+12	1111	6760882007541429	CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.obj	9d34f71fbad0b6f6
+15	1125	6760882007671461	CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.obj	df0f899491fde2c6
+19	1125	6760882007671461	CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj	d741260ededbf7e8
+20	1210	6760882008511648	CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj	71d3800d25b6b1d3
+1211	2876	6760882025139581	../tpi.exe	46dc882ea713e937

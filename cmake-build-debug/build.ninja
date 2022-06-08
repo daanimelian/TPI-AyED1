@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/melia/CLionProjects/TPI-AyED1/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target tpi
 
@@ -49,100 +49,100 @@ cmake_ninja_workdir = C$:/Users/melia/CLionProjects/TPI-AyED1/cmake-build-debug/
 
 build cmake_object_order_depends_target_tpi: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
 
-build CMakeFiles/tpi.dir/main.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/main.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/main.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/main.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\main.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/auxiliares.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/auxiliares.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/auxiliares.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/auxiliares.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\auxiliares.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/ejercicios.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/ejercicios.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/ejercicios.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/ejercicios.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\ejercicios.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/cantidadDeSaltosTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/cantidadDeSaltosTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\cantidadDeSaltosTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/construirGrillaTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/construirGrillaTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\construirGrillaTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/corregirViajeTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/corregirViajeTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\corregirViajeTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/distanciaTotalTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/distanciaTotalTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\distanciaTotalTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/excesoDeVelocidadTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/excesoDeVelocidadTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\excesoDeVelocidadTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/flotaTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/flotaTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\flotaTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/recorridoNoCubiertoTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/recorridoNoCubiertoTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\recorridoNoCubiertoTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
   TARGET_PDB = ..\tpi.pdb
 
-build CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/tiempoTotalTEST.cpp || cmake_object_order_depends_target_tpi
+build CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.obj: CXX_COMPILER__tpi_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/testEnunciado/tiempoTotalTEST.cpp || cmake_object_order_depends_target_tpi
   DEP_FILE = CMakeFiles\tpi.dir\testEnunciado\tiempoTotalTEST.obj.d
   FLAGS = -g --coverage -g -std=gnu++11
-  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = CMakeFiles\tpi.dir
   OBJECT_FILE_DIR = CMakeFiles\tpi.dir\testEnunciado
   TARGET_COMPILE_PDB = CMakeFiles\tpi.dir\
@@ -172,7 +172,7 @@ build ../tpi.exe: CXX_EXECUTABLE_LINKER__tpi_Debug CMakeFiles/tpi.dir/main.obj C
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -183,7 +183,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI-AyED1 -BC:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI_AyED1_v_2 -BC:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -201,7 +201,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -213,7 +213,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -225,7 +225,7 @@ build install/local: phony CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -234,7 +234,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/melia/CLionProjects/TPI-AyED1/CMakeLists.txt
+# C:/Users/melia/CLionProjects/TPI_AyED1_v_2/CMakeLists.txt
 # =============================================================================
 
 
@@ -242,7 +242,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 # Utility command for edit_cache
 
 build lib/googletest-master/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -253,7 +253,7 @@ build lib/googletest-master/edit_cache: phony lib/googletest-master/CMakeFiles/e
 # Utility command for rebuild_cache
 
 build lib/googletest-master/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI-AyED1 -BC:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI_AyED1_v_2 -BC:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -271,7 +271,7 @@ build lib/googletest-master/list_install_components: phony
 # Utility command for install
 
 build lib/googletest-master/CMakeFiles/install.util: CUSTOM_COMMAND lib/googletest-master/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -283,7 +283,7 @@ build lib/googletest-master/install: phony lib/googletest-master/CMakeFiles/inst
 # Utility command for install/local
 
 build lib/googletest-master/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/googletest-master/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -295,7 +295,7 @@ build lib/googletest-master/install/local: phony lib/googletest-master/CMakeFile
 # Utility command for install/strip
 
 build lib/googletest-master/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/googletest-master/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -304,7 +304,7 @@ build lib/googletest-master/install/strip: phony lib/googletest-master/CMakeFile
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/CMakeLists.txt
+# C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -316,10 +316,10 @@ build lib/googletest-master/install/strip: phony lib/googletest-master/CMakeFile
 
 build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
 
-build lib/googletest-master/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+build lib/googletest-master/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEP_FILE = lib\googletest-master\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
   FLAGS = -g  -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++11
-  INCLUDES = -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock/include -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock/include -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = lib\googletest-master\googlemock\CMakeFiles\gmock.dir
   OBJECT_FILE_DIR = lib\googletest-master\googlemock\CMakeFiles\gmock.dir\src
   TARGET_COMPILE_PDB = lib\googletest-master\googlemock\CMakeFiles\gmock.dir\gmock.pdb
@@ -351,10 +351,10 @@ build lib/googletest-master/googlemock/libgmockd.a: CXX_STATIC_LIBRARY_LINKER__g
 
 build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
 
-build lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+build lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEP_FILE = lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
   FLAGS = -g  -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++11
-  INCLUDES = -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock/include -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock/include -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir
   OBJECT_FILE_DIR = lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir\src
   TARGET_COMPILE_PDB = lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir\gmock_main.pdb
@@ -382,7 +382,7 @@ build lib/googletest-master/googlemock/libgmock_maind.a: CXX_STATIC_LIBRARY_LINK
 # Utility command for edit_cache
 
 build lib/googletest-master/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -393,7 +393,7 @@ build lib/googletest-master/googlemock/edit_cache: phony lib/googletest-master/g
 # Utility command for rebuild_cache
 
 build lib/googletest-master/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI-AyED1 -BC:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI_AyED1_v_2 -BC:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -411,7 +411,7 @@ build lib/googletest-master/googlemock/list_install_components: phony
 # Utility command for install
 
 build lib/googletest-master/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND lib/googletest-master/googlemock/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -423,7 +423,7 @@ build lib/googletest-master/googlemock/install: phony lib/googletest-master/goog
 # Utility command for install/local
 
 build lib/googletest-master/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/googletest-master/googlemock/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -435,7 +435,7 @@ build lib/googletest-master/googlemock/install/local: phony lib/googletest-maste
 # Utility command for install/strip
 
 build lib/googletest-master/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/googletest-master/googlemock/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -444,7 +444,7 @@ build lib/googletest-master/googlemock/install/strip: phony lib/googletest-maste
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googlemock/CMakeLists.txt
+# C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googlemock/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -456,10 +456,10 @@ build lib/googletest-master/googlemock/install/strip: phony lib/googletest-maste
 
 build cmake_object_order_depends_target_gtest: phony || lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir
 
-build lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+build lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEP_FILE = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
   FLAGS = -g  -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++11
-  INCLUDES = -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest
+  INCLUDES = -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest
   OBJECT_DIR = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest.dir
   OBJECT_FILE_DIR = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest.dir\src
   TARGET_COMPILE_PDB = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest.dir\gtest.pdb
@@ -491,10 +491,10 @@ build lib/googletest-master/googlemock/gtest/libgtestd.a: CXX_STATIC_LIBRARY_LIN
 
 build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
 
-build lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_Debug C$:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+build lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_Debug C$:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEP_FILE = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
   FLAGS = -g  -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++11
-  INCLUDES = -IC:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest -isystem C:/Users/melia/CLionProjects/TPI-AyED1/lib/googletest-master/googletest/include
+  INCLUDES = -IC:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest -isystem C:/Users/melia/CLionProjects/TPI_AyED1_v_2/lib/googletest-master/googletest/include
   OBJECT_DIR = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest_main.dir
   OBJECT_FILE_DIR = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest_main.dir\src
   TARGET_COMPILE_PDB = lib\googletest-master\googlemock\gtest\CMakeFiles\gtest_main.dir\gtest_main.pdb
@@ -522,7 +522,7 @@ build lib/googletest-master/googlemock/gtest/libgtest_maind.a: CXX_STATIC_LIBRAR
 # Utility command for edit_cache
 
 build lib/googletest-master/googlemock/gtest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -533,7 +533,7 @@ build lib/googletest-master/googlemock/gtest/edit_cache: phony lib/googletest-ma
 # Utility command for rebuild_cache
 
 build lib/googletest-master/googlemock/gtest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI-AyED1 -BC:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\melia\CLionProjects\TPI_AyED1_v_2 -BC:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -551,7 +551,7 @@ build lib/googletest-master/googlemock/gtest/list_install_components: phony
 # Utility command for install
 
 build lib/googletest-master/googlemock/gtest/CMakeFiles/install.util: CUSTOM_COMMAND lib/googletest-master/googlemock/gtest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -563,7 +563,7 @@ build lib/googletest-master/googlemock/gtest/install: phony lib/googletest-maste
 # Utility command for install/local
 
 build lib/googletest-master/googlemock/gtest/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/googletest-master/googlemock/gtest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -575,7 +575,7 @@ build lib/googletest-master/googlemock/gtest/install/local: phony lib/googletest
 # Utility command for install/strip
 
 build lib/googletest-master/googlemock/gtest/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/googletest-master/googlemock/gtest/all
-  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D C:\Users\melia\CLionProjects\TPI_AyED1_v_2\cmake-build-debug\lib\googletest-master\googlemock\gtest && "D:\Program Files\CLion 2022.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -611,28 +611,28 @@ build tpi.exe: phony ../tpi.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/melia/CLionProjects/TPI-AyED1/cmake-build-debug
+# Folder: C:/Users/melia/CLionProjects/TPI_AyED1_v_2/cmake-build-debug
 
 build all: phony ../tpi.exe lib/googletest-master/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/melia/CLionProjects/TPI-AyED1/cmake-build-debug/lib/googletest-master
+# Folder: C:/Users/melia/CLionProjects/TPI_AyED1_v_2/cmake-build-debug/lib/googletest-master
 
 build lib/googletest-master/all: phony lib/googletest-master/googlemock/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/melia/CLionProjects/TPI-AyED1/cmake-build-debug/lib/googletest-master/googlemock
+# Folder: C:/Users/melia/CLionProjects/TPI_AyED1_v_2/cmake-build-debug/lib/googletest-master/googlemock
 
 build lib/googletest-master/googlemock/all: phony lib/googletest-master/googlemock/libgmockd.a lib/googletest-master/googlemock/libgmock_maind.a lib/googletest-master/googlemock/gtest/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/melia/CLionProjects/TPI-AyED1/cmake-build-debug/lib/googletest-master/googlemock/gtest
+# Folder: C:/Users/melia/CLionProjects/TPI_AyED1_v_2/cmake-build-debug/lib/googletest-master/googlemock/gtest
 
 build lib/googletest-master/googlemock/gtest/all: phony lib/googletest-master/googlemock/gtest/libgtestd.a lib/googletest-master/googlemock/gtest/libgtest_maind.a
 

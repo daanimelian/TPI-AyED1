@@ -19,6 +19,7 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
 tiempo maxTiempo (viaje v);
 tiempo minTiempo (viaje v);
 tuple<tiempo,gps> buscoSiguientePunto(viaje v, tuple <tiempo, gps> tup);
+tuple<tiempo, gps> ultimoPuntoDelviaje(viaje v);
 double velocidad(tuple <tiempo, gps> p1, tuple <tiempo, gps> p2);
 gps esq1DeCelda(celda c);
 gps esq2DeCelda(celda c);

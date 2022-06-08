@@ -1,4 +1,5 @@
 # ninja log v5
+<<<<<<< HEAD
 2	590	6758248146880276	CMakeFiles/tpi.dir/ejercicios.obj	774aee28a8124595
 9	847	6758247879346515	CMakeFiles/tpi.dir/auxiliares.obj	f6148e043623b38a
 2	820	6758247879086459	CMakeFiles/tpi.dir/main.obj	75ae88f1b5ca5fb2
@@ -75,3 +76,21 @@
 19	1125	6760882007671461	CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj	d741260ededbf7e8
 20	1210	6760882008511648	CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj	71d3800d25b6b1d3
 1211	2876	6760882025139581	../tpi.exe	46dc882ea713e937
+=======
+1	1089	6764266276674879	CMakeFiles/tpi.dir/main.obj	959b72276b522162
+33	1200	6764266277955172	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	4a9d81d826f42c44
+21	1266	6764266278555300	CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.obj	e5a7af913947f4e2
+29	1270	6764266278525291	CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.obj	eda62337e9b3ef0f
+17	1319	6764266279155440	CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.obj	b8fcae17ad74f3e1
+13	1333	6764266279295470	CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.obj	1b95a2c1dfc13b90
+8	1342	6764266279385483	CMakeFiles/tpi.dir/auxiliares.obj	8571f4675889643a
+10	1364	6764266279565525	CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.obj	6f5586597578db77
+27	1374	6764266279705421	CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj	226e51a4db245d5e
+11	1388	6764266279845070	CMakeFiles/tpi.dir/ejercicios.obj	f47bc7e9b710b542
+16	1412	6764266280085125	CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.obj	fc1d272dcf480d0d
+23	1461	6764266280585231	CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj	15787e1dd203ebf3
+31	5899	6764266324908738	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	e6310d6b8469d42f
+5901	6928	6764266335269029	lib/googletest-master/googlemock/gtest/libgtestd.a	7b14ffc5e8016962
+6928	6962	6764266335618352	lib/googletest-master/googlemock/gtest/libgtest_maind.a	87f00d77c9d32b43
+6962	8518	6764266351122277	../tpi.exe	46dc882ea713e937
+>>>>>>> 2fd814fd06c90b948a8361c62433c3ddd6b022e2

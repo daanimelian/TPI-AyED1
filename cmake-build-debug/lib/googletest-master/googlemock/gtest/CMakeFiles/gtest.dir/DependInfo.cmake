@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/melia/CLionProjects/TPI-AyED1/template-alumnos/lib/googletest-master/googletest/src/gtest-all.cc" "lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj" "gcc" "lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj.d"
+  "C:/Users/melia/CLionProjects/TPI_AyED1_v_2/template-alumnos/lib/googletest-master/googletest/src/gtest-all.cc" "lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj" "gcc" "lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj.d"
   )
 
 # Targets to which this target links.

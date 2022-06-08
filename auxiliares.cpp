@@ -117,7 +117,6 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
     myfile.close();
 
 }
-
 tiempo maxTiempo (viaje v){
     tiempo res = obtenerTiempo(v[0]);
     int i = 1;
@@ -142,25 +141,32 @@ tiempo minTiempo (viaje v){
     return res;
 }
 
-tuple<tiempo,gps> buscoSiguientePunto(viaje v, tuple <tiempo, gps> tup){
-    if (maxTiempo(v) == obtenerTiempo(tup))
-        return tup;
-    int i = 0; int k = 0; tuple<tiempo, gps> res;
+tuple<tiempo,gps>buscoSiguientePunto(viaje v, tuple <tiempo, gps> tup) {
+    int k = 0;
+    tuple<tiempo, gps> res = ultimoPuntoDelviaje(v);
     while (k < v.size()){
-     if (obtenerTiempo(v[k]) == maxTiempo(v)) {
-         res = v[k];
-         k = v.size();
-     }   
-     k = k + 1;
-    }
-    while (i < v.size()){
-        if (obtenerTiempo(v[i]) > obtenerTiempo(tup) && obtenerTiempo(v[i]) < obtenerTiempo(res))
-            res = v[i];
-        i = i + 1;
+        if ((obtenerTiempo(v[k]) < obtenerTiempo(res)) && (obtenerTiempo(v[k]) > obtenerTiempo(tup)) ){
+            res = v[k];
+        }
+        k++;
     }
     return res;
 }
 
+tuple<tiempo, gps> ultimoPuntoDelviaje(viaje v){
+    int i = 0;
+    tiempo t_ref = maxTiempo(v);
+    tuple<tiempo, gps> res;
+
+    while(i < v.size()){
+        if (obtenerTiempo(v[i]) == t_ref){
+            res = v[i];
+            i = v.size();
+        }
+        i++;
+    }
+    return res;
+}
 double velocidad(tuple <tiempo, gps> p1, tuple <tiempo, gps> p2){
     double vel = (distEnKM(obtenerPosicion(p1), obtenerPosicion(p2)))/((obtenerTiempo(p2) - obtenerTiempo(p1))/3600);
     return vel;
@@ -204,9 +210,9 @@ celda buscoCeldaDeUnViaje(tuple<tiempo, gps> v, grilla g){
 bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
     bool res;
     if ((minTiempo(v) > t0 && maxTiempo(v) < tf)
-    || (minTiempo(v) < t0 && maxTiempo(v) > t0 )
-    || (minTiempo(v) < tf && maxTiempo(v) > tf)
-    || (minTiempo(v) < t0 && maxTiempo(v) > tf)){
+        || (minTiempo(v) < t0 && maxTiempo(v) > t0 )
+        || (minTiempo(v) < tf && maxTiempo(v) > tf)
+        || (minTiempo(v) < t0 && maxTiempo(v) > tf)){
         res = true;
     } else{
         res = false;
@@ -242,8 +248,8 @@ tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v, ve
         if ((obtenerTiempo(v[i]) < t_ref) && (obtenerTiempo(v[i]) > t_ant) && !tieneError(v[i], errores)){
             t_ant = obtenerTiempo(v[i]);
             res = v[i];
-            }
         }
+    }
 
     return res;
 }
@@ -298,4 +304,6 @@ bool estaSobreRecta(double x, double y, gps a, gps b){
     double res = (ordenada*x) + pendiente;
     return y == res;
 }
+
+
 

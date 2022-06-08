@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\melia\CLionProjects\TPI_AyED1_v_2\template-alumnos Select CMakeLists.txt

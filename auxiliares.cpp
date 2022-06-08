@@ -209,10 +209,10 @@ celda buscoCeldaDeUnViaje(tuple<tiempo, gps> v, grilla g){
 
 bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
     bool res;
-    if ((minTiempo(v) > t0 && maxTiempo(v) < tf)
-        || (minTiempo(v) < t0 && maxTiempo(v) > t0 )
-        || (minTiempo(v) < tf && maxTiempo(v) > tf)
-        || (minTiempo(v) < t0 && maxTiempo(v) > tf)){
+    if ((minTiempo(v) >= t0 && maxTiempo(v) <= tf)
+        || (minTiempo(v) <= t0 && maxTiempo(v) >= t0 )
+        || (minTiempo(v) <= tf && maxTiempo(v) >= tf)
+        || (minTiempo(v) <= t0 && maxTiempo(v) >= tf)){
         res = true;
     } else{
         res = false;
@@ -298,12 +298,6 @@ gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b, tiemp
 
 }
 
-bool estaSobreRecta(double x, double y, gps a, gps b){
-    double pendiente = ((obtenerLongitud(a)- obtenerLongitud(b))/(obtenerLatitud(a)- obtenerLatitud(b)));
-    double ordenada = (((obtenerLatitud(a)*obtenerLongitud(b)) - (obtenerLatitud(b)*obtenerLongitud(a))) / (obtenerLatitud(a)- obtenerLatitud(b)));
-    double res = (ordenada*x) + pendiente;
-    return y == res;
-}
 
 
 

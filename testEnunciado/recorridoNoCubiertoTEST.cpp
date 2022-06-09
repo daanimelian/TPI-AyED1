@@ -75,4 +75,19 @@ TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
 
 }
 
+TEST(recorridoNoCubiertoTEST, viajeConImperfeccionIgualAlUmbral){
+    viaje v = {};
+    const recorrido R_2 = {P};
+
+
+    for(int i = 0; i < R_2.size(); i++){
+        v.push_back(medicion(i, desviarPunto(R[i], 0, 2000)));
+    }
+
+    vector<gps> res = recorridoNoCubierto(v, R_2, distEnKM(obtenerPosicion(v[0]), R_2[0]));
+    EXPECT_EQ(res.size(), 1);
+    ASSERT_ELEMENTS(res, {R_2[0]});
+
+}
+
 

@@ -34,19 +34,18 @@ const recorrido R = {P,
                       };
 
 const recorrido RRulos = {P,
-                     desviarPunto(P, 1000, 0),
-                     desviarPunto(P, 2000, 0),
-                     desviarPunto(P, 3000, 0),
-                     desviarPunto(P, 4000, 0),
-                     desviarPunto(P, 5000, 0),
-                     desviarPunto(P, 5000, 100),
-                     desviarPunto(P, 4000, 100),
-                     desviarPunto(P, 3000, 100),
-                     desviarPunto(P, 2000, 100),
-                     desviarPunto(P, 1000, 100),
-                     desviarPunto(P, 0, 0)
+                         desviarPunto(P, 1000, 0),
+                         desviarPunto(P, 2000, 0),
+                         desviarPunto(P, 3000, 0),
+                         desviarPunto(P, 4000, 0),
+                         desviarPunto(P, 5000, 0),
+                         desviarPunto(P, 5000, 100),
+                         desviarPunto(P, 4000, 100),
+                         desviarPunto(P, 3000, 100),
+                         desviarPunto(P, 2000, 100),
+                         desviarPunto(P, 1000, 100),
+                         desviarPunto(P, 0, 0)
 };
-
 
 
 TEST(recorridoNoCubiertoTEST, viajePerfecto){
@@ -70,8 +69,25 @@ TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
         v.push_back(medicion(i, desviarPunto(R[i], 0, desvios[i])));
     }
 
-    vector<gps> res = recorridoNoCubierto(v, R, 100);
+    vector<gps> res = recorridoNoCubierto(v, R, 0.1);
     EXPECT_EQ(res.size(), 3);
     ASSERT_ELEMENTS(res, {R[3], R[0], R[2]});
 
 }
+
+TEST(recorridoNoCubiertoTEST, viajeConImperfeccionIgualAlUmbral){
+    viaje v = {};
+    const recorrido R_2 = {P};
+
+
+    for(int i = 0; i < R_2.size(); i++){
+        v.push_back(medicion(i, desviarPunto(R[i], 0, 2000)));
+    }
+
+    vector<gps> res = recorridoNoCubierto(v, R_2, distEnKM(obtenerPosicion(v[0]), R_2[0]));
+    EXPECT_EQ(res.size(), 1);
+    ASSERT_ELEMENTS(res, {R_2[0]});
+
+}
+
+

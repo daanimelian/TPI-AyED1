@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <fstream>
 #include <iomanip>
-
 using namespace std;
 
 /******++++**************************** EJERCICIO tiempoTotal ***********+++***********************/
@@ -42,10 +41,11 @@ bool excesoDeVelocidad(viaje v) {
 /************************************ EJERCICIO recorridoCubierto *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
     vector<gps> resp = {};
-    int i = 0; int k = 0; bool estaDentro = false;
+    int i = 0, k = 0;
+    bool estaDentro = false;
     while (k < r.size()){
         while (i < v.size()){
-            if (distEnKM(obtenerPosicion(v[i]), r[k]) < (u/1000)) { // el test case esta mal, va la u sola
+            if (distEnKM(obtenerPosicion(v[i]), r[k]) < u) {
                 estaDentro = true;
                 i = v.size();
             }

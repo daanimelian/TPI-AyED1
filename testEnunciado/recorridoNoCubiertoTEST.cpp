@@ -33,7 +33,19 @@ const recorrido R = {P,
                      desviarPunto(P, 9000, 0),
                       };
 
-
+const recorrido RRulos = {P,
+                         desviarPunto(P, 1000, 0),
+                         desviarPunto(P, 2000, 0),
+                         desviarPunto(P, 3000, 0),
+                         desviarPunto(P, 4000, 0),
+                         desviarPunto(P, 5000, 0),
+                         desviarPunto(P, 5000, 100),
+                         desviarPunto(P, 4000, 100),
+                         desviarPunto(P, 3000, 100),
+                         desviarPunto(P, 2000, 100),
+                         desviarPunto(P, 1000, 100),
+                         desviarPunto(P, 0, 0)
+};
 
 
 TEST(recorridoNoCubiertoTEST, viajePerfecto){

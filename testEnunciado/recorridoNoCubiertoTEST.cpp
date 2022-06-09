@@ -33,19 +33,6 @@ const recorrido R = {P,
                      desviarPunto(P, 9000, 0),
                       };
 
-const recorrido RRulos = {P,
-                     desviarPunto(P, 1000, 0),
-                     desviarPunto(P, 2000, 0),
-                     desviarPunto(P, 3000, 0),
-                     desviarPunto(P, 4000, 0),
-                     desviarPunto(P, 5000, 0),
-                     desviarPunto(P, 5000, 100),
-                     desviarPunto(P, 4000, 100),
-                     desviarPunto(P, 3000, 100),
-                     desviarPunto(P, 2000, 100),
-                     desviarPunto(P, 1000, 100),
-                     desviarPunto(P, 0, 0)
-};
 
 
 
@@ -55,7 +42,7 @@ TEST(recorridoNoCubiertoTEST, viajePerfecto){
         v.push_back(medicion(i, R[i]));
     }
 
-    EXPECT_EQ(recorridoNoCubierto(v, R, 10).size(), 0);
+    EXPECT_EQ(recorridoNoCubierto(v, R, 1).size(), 0);
 }
 
 TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
@@ -75,3 +62,5 @@ TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
     ASSERT_ELEMENTS(res, {R[3], R[0], R[2]});
 
 }
+
+

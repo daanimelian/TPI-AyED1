@@ -54,7 +54,7 @@ TEST(recorridoNoCubiertoTEST, viajePerfecto){
         v.push_back(medicion(i, R[i]));
     }
 
-    EXPECT_EQ(recorridoNoCubierto(v, R, 1).size(), 0);
+    EXPECT_EQ(recorridoNoCubierto(v, R, 10).size(), 0);
 }
 
 TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){

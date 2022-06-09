@@ -33,3 +33,9 @@ TEST(flotaTotalTEST, todosDespuesDeFranja){
 TEST(flotaTotalTEST, unoEnFranja){
     EXPECT_EQ(flota(f, 2.0, 2.5), 1);
 }
+
+TEST(flotaTotalTEST, igualAFranja){
+    EXPECT_EQ(flota(f, 1.5, 1.9), 1);
+    EXPECT_EQ(flota(f, 1.5, 2.0), 1);
+    EXPECT_EQ(flota(f, 2.0, 2.7), 1);
+}

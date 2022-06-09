@@ -41,13 +41,12 @@ bool excesoDeVelocidad(viaje v) {
 
 /************************************ EJERCICIO recorridoCubierto *******************************/
 vector<gps> recorridoNoCubierto(viaje v, recorrido r, distancia u) {
-    std::cout << u/1000 << std::endl;
     vector<gps> resp = {};
     int i = 0, k = 0;
     bool estaDentro = false;
     while (k < r.size()){
         while (i < v.size()){
-            if (distEnKM(obtenerPosicion(v[i]), r[k]) < u) { 
+            if (distEnKM(obtenerPosicion(v[i]), r[k]) < u) {
                 estaDentro = true;
                 i = v.size();
             }

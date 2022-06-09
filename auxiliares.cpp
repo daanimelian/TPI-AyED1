@@ -210,8 +210,8 @@ celda buscoCeldaDeUnViaje(tuple<tiempo, gps> v, grilla g){
 bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
     bool res;
     if ((minTiempo(v) >= t0 && maxTiempo(v) <= tf)
-        || (minTiempo(v) <= t0 && maxTiempo(v) >= t0 )
-        || (minTiempo(v) <= tf && maxTiempo(v) >= tf)
+        || (minTiempo(v) <= t0 && maxTiempo(v) > t0 )
+        || (minTiempo(v) <= tf && maxTiempo(v) > tf)
         || (minTiempo(v) <= t0 && maxTiempo(v) >= tf)){
         res = true;
     } else{

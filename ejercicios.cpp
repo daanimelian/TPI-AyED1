@@ -102,8 +102,8 @@ grilla construirGrilla(gps esq1, gps esq2, int n, int m) {
 
 /************************************* EJERCICIO cantidadDeSaltos ******************************/
 int cantidadDeSaltos(grilla g, viaje v) {
-    int resp = 0; int i = 0;
-    celda c; celda d;
+    int resp = 0, i = 0;
+    celda c, d;
     while (i < v.size()){
         c = buscoCeldaDeUnViaje(v[i], g);
         d = buscoCeldaDeUnViaje(buscoSiguientePunto(v,v[i]),g);
@@ -112,7 +112,6 @@ int cantidadDeSaltos(grilla g, viaje v) {
             resp = resp + 1;
         i = i + 1;
     }
-    return resp;
     return resp;
 }
 

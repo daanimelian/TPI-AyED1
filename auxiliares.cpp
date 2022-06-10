@@ -69,7 +69,7 @@ tuple<tiempo, gps> medicion(tiempo t, gps g) {
     return make_tuple(t, g);
 }
 
-void guardarGrillaEnArchivo(grilla g, string nombreArchivo){
+/*void guardarGrillaEnArchivo(grilla g, string nombreArchivo){
     ofstream myfile;
     float esq1_lat, esq2_lat, esq1_lng, esq2_lng;
     int name_0, name_1;
@@ -116,7 +116,7 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
     }
     myfile.close();
 
-}
+}*/
 tiempo maxTiempo (viaje v){
     tiempo res = obtenerTiempo(v[0]);
     int i = 1;
@@ -239,10 +239,10 @@ int puntoACorregir(viaje v, tiempo error){
 
 
 tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v, vector<tiempo> errores){
-    tuple<tiempo, gps> res;
     int i=0;
-    double t_ant = obtenerTiempo(v[0]);
+    double t_ant = obtenerTiempo(v[i]);
     double t_ref = obtenerTiempo(punto);
+    tuple<tiempo, gps> res = v[i];
     while (i<v.size()){
         i++;
         if ((obtenerTiempo(v[i]) < t_ref) && (obtenerTiempo(v[i]) > t_ant) && !tieneError(v[i], errores)){
@@ -257,14 +257,14 @@ tuple<tiempo, gps>  puntoInmediatoAnterior(tuple<tiempo, gps> punto, viaje v, ve
 tuple<tiempo, gps>  puntoInmediatoPosterior(tuple<tiempo, gps> punto, viaje v, vector<tiempo> errores){
     tuple<tiempo, gps> res;
     int i=0;
-    double t_post = obtenerTiempo(v[0]);
+    double t_post = maxTiempo(v);
     double t_ref = obtenerTiempo(punto);
     while (i<v.size()){
-        i++;
-        if ((obtenerTiempo(v[i]) > t_ref) && (obtenerTiempo(v[i]) < t_post) && !tieneError(v[i], errores)){
+        if ((obtenerTiempo(v[i]) > t_ref) && (obtenerTiempo(v[i]) <= t_post) && !tieneError(v[i], errores)){
             t_post = obtenerTiempo(v[i]);
             res = v[i];
         }
+        i++;
     }
 
     return res;
@@ -289,10 +289,13 @@ double velocidadMedia(tiempo tiempo_a, tiempo tiempo_b, double a, double b){
 
 gps  gpsSobreRecta(tuple<tiempo, gps> punto_a, tuple<tiempo, gps> punto_b, tiempo tp_error){
     double latitud, longitud;
-    double vel_media_lat = velocidadMedia(obtenerTiempo(punto_a), obtenerTiempo(punto_b), obtenerLatitud(obtenerPosicion(punto_a)),  obtenerLatitud(obtenerPosicion(punto_b)));
-    double vel_media_long = velocidadMedia(obtenerTiempo(punto_a), obtenerTiempo(punto_b), obtenerLongitud(obtenerPosicion(punto_a)),  obtenerLongitud(obtenerPosicion(punto_b)));
-    latitud = (tp_error- obtenerTiempo(punto_a))*vel_media_lat + obtenerLatitud(obtenerPosicion(punto_a));
-    longitud = (tp_error- obtenerTiempo(punto_a))*vel_media_long + obtenerLongitud(obtenerPosicion(punto_a));
+    double tiempo_a = obtenerTiempo(punto_a) , tiempo_b=obtenerTiempo(punto_b);
+    double latitud_a = obtenerLatitud(obtenerPosicion(punto_a)), latitud_b = obtenerLatitud(obtenerPosicion(punto_b));
+    double longitud_a = obtenerLongitud(obtenerPosicion(punto_a)) , longitud_b = obtenerLongitud(obtenerPosicion(punto_b));
+    double vel_media_lat = velocidadMedia(tiempo_a, tiempo_b, latitud_a,  latitud_b);
+    double vel_media_long = velocidadMedia(tiempo_a, tiempo_b, longitud_a,  longitud_b);
+    latitud = (tp_error- tiempo_a)*vel_media_lat + latitud_a;
+    longitud = (tp_error- tiempo_a)*vel_media_long + longitud_a;
 
     return make_tuple(latitud, longitud);
 

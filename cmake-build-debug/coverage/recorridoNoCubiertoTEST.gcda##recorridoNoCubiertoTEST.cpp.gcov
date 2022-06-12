@@ -1,0 +1,412 @@
+        -:    0:Source:C:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/recorridoNoCubiertoTEST.cpp
+        -:    0:Graph:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testEnunciado\recorridoNoCubiertoTEST.gcno
+        -:    0:Data:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testEnunciado\recorridoNoCubiertoTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:template<typename T>
+function _Z8includedISt5tupleIJddEEEbT_St6vectorIS2_SaIS2_EE called 4 returned 100% blocks executed 90%
+        4:    6:bool included(T elem, vector<T> container){
+        7:    7:    for (int i = 0; i < container.size(); ++i) {
+        4:    7-block  0
+        3:    7-block  1
+        7:    7-block  2
+call    0 returned 7
+branch  1 taken 7
+branch  2 taken 0 (fallthrough)
+        7:    8:        if (container[i] == elem){return true;}
+        7:    8-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 4 (fallthrough)
+branch  3 taken 3
+        4:    8-block  1
+        -:    9:    }
+    #####:   10:    return false;
+    %%%%%:   10-block  0
+        -:   11:}
+        -:   12:
+        -:   13:template<typename T>
+function _Z15ASSERT_ELEMENTSISt5tupleIJddEEEvSt6vectorIT_SaIS3_EES5_ called 2 returned 100% blocks executed 39%
+        2:   14:void ASSERT_ELEMENTS(vector<T> container, vector<T> elems) {
+        6:   15:    for(int i = 0; i < elems.size(); i++ ) {
+        2:   15-block  0
+        4:   15-block  1
+        6:   15-block  2
+call    0 returned 6
+branch  1 taken 4
+branch  2 taken 2 (fallthrough)
+       4*:   16:        ASSERT_TRUE(included(elems[i], container));
+        4:   16-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   16-block  1
+call    3 returned 4
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   16-block  2
+call    7 returned 4
+branch  8 taken 4 (fallthrough)
+branch  9 taken 0 (throw)
+        4:   16-block  3
+call   10 returned 4
+call   11 returned 4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 4
+    %%%%%:   16-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   16-block  5
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   16-block  6
+call   20 never executed
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   16-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   16-block  8
+call   27 never executed
+call   28 never executed
+call   29 never executed
+        4:   16-block  9
+        4:   16-block 10
+call   30 returned 4
+branch 31 taken 4 (fallthrough)
+branch 32 taken 0
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+    $$$$$:   16-block 13
+call   33 never executed
+    $$$$$:   16-block 14
+    $$$$$:   16-block 15
+call   34 never executed
+    $$$$$:   16-block 16
+    $$$$$:   16-block 17
+call   35 never executed
+    $$$$$:   16-block 18
+    $$$$$:   16-block 19
+call   36 never executed
+        -:   17:    }
+        -:   18:
+        -:   19:}
+        -:   20:
+        -:   21:using namespace std;
+        -:   22:
+        -:   23:const gps P = puntoGps(-31.465027, -64.212973);
+        -:   24:const recorrido R = {P,
+        -:   25:                     desviarPunto(P, 1000, 0),
+        -:   26:                     desviarPunto(P, 2000, 0),
+        -:   27:                     desviarPunto(P, 3000, 0),
+        -:   28:                     desviarPunto(P, 4000, 0),
+        -:   29:                     desviarPunto(P, 5000, 0),
+        -:   30:                     desviarPunto(P, 6000, 0),
+        -:   31:                     desviarPunto(P, 7000, 0),
+        -:   32:                     desviarPunto(P, 8000, 0),
+        -:   33:                     desviarPunto(P, 9000, 0),
+        -:   34:                      };
+        -:   35:
+        -:   36:const recorrido RRulos = {P,
+        -:   37:                         desviarPunto(P, 1000, 0),
+        -:   38:                         desviarPunto(P, 2000, 0),
+        -:   39:                         desviarPunto(P, 3000, 0),
+        -:   40:                         desviarPunto(P, 4000, 0),
+        -:   41:                         desviarPunto(P, 5000, 0),
+        -:   42:                         desviarPunto(P, 5000, 100),
+        -:   43:                         desviarPunto(P, 4000, 100),
+        -:   44:                         desviarPunto(P, 3000, 100),
+        -:   45:                         desviarPunto(P, 2000, 100),
+        -:   46:                         desviarPunto(P, 1000, 100),
+        -:   47:                         desviarPunto(P, 0, 0)
+        -:   48:};
+        -:   49:
+        -:   50:
+        2:   51:TEST(recorridoNoCubiertoTEST, viajePerfecto){
+        1:   52:    viaje v = {};
+       11:   53:    for(int i = 0; i < R.size(); i++){
+       10:   54:        v.push_back(medicion(i, R[i]));
+        -:   55:    }
+        -:   56:
+       1*:   57:    EXPECT_EQ(recorridoNoCubierto(v, R, 10).size(), 0);
+        1:   58:}
+------------------
+_ZN42recorridoNoCubiertoTEST_viajePerfecto_Test8TestBodyEv:
+function _ZN42recorridoNoCubiertoTEST_viajePerfecto_Test8TestBodyEv called 1 returned 100% blocks executed 41%
+        1:   51:TEST(recorridoNoCubiertoTEST, viajePerfecto){
+        1:   52:    viaje v = {};
+        1:   52-block  0
+call    0 returned 1
+       11:   53:    for(int i = 0; i < R.size(); i++){
+       11:   53-block  0
+call    0 returned 11
+branch  1 taken 10
+branch  2 taken 1 (fallthrough)
+       10:   54:        v.push_back(medicion(i, R[i]));
+       10:   54-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   54-block  1
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:   54-block  2
+    $$$$$:   54-block  3
+        -:   55:    }
+        -:   56:
+       1*:   57:    EXPECT_EQ(recorridoNoCubierto(v, R, 10).size(), 0);
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   57-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   57-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   57-block  4
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 0 (fallthrough)
+branch 18 taken 1
+    %%%%%:   57-block  5
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    %%%%%:   57-block  6
+call   22 never executed
+branch 23 never executed
+branch 24 never executed
+    %%%%%:   57-block  7
+call   25 never executed
+branch 26 never executed
+branch 27 never executed
+    %%%%%:   57-block  8
+call   28 never executed
+branch 29 never executed
+branch 30 never executed
+    %%%%%:   57-block  9
+call   31 never executed
+call   32 never executed
+        1:   57-block 10
+call   33 returned 1
+    $$$$$:   57-block 11
+    $$$$$:   57-block 12
+    $$$$$:   57-block 13
+    $$$$$:   57-block 14
+    $$$$$:   57-block 15
+    $$$$$:   57-block 16
+call   34 never executed
+    $$$$$:   57-block 17
+    $$$$$:   57-block 18
+call   35 never executed
+    $$$$$:   57-block 19
+    $$$$$:   57-block 20
+call   36 never executed
+        1:   58:}
+call    0 returned 1
+    $$$$$:   58-block  0
+call    1 never executed
+------------------
+_ZN42recorridoNoCubiertoTEST_viajePerfecto_TestC1Ev:
+function _ZN42recorridoNoCubiertoTEST_viajePerfecto_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   51:TEST(recorridoNoCubiertoTEST, viajePerfecto){
+        1:   51-block  0
+call    0 returned 1
+------------------
+        -:   59:
+        2:   60:TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
+        1:   61:    viaje v = {};
+        1:   62:    vector<int> desvios(R.size(), 0);
+        1:   63:    desvios[0] = 390;
+        1:   64:    desvios[1] = 30;
+        1:   65:    desvios[2] = -190;
+        1:   66:    desvios[3] = -390;
+        -:   67:
+       11:   68:    for(int i = 0; i < R.size(); i++){
+       10:   69:        v.push_back(medicion(i, desviarPunto(R[i], 0, desvios[i])));
+        -:   70:    }
+        -:   71:
+        2:   72:    vector<gps> res = recorridoNoCubierto(v, R, 0.1);
+       1*:   73:    EXPECT_EQ(res.size(), 3);
+        1:   74:    ASSERT_ELEMENTS(res, {R[3], R[0], R[2]});
+        -:   75:
+        1:   76:}
+------------------
+_ZN66recorridoNoCubiertoTEST_viajeConImperfeccionesMayoresAlUmbral_Test8TestBodyEv:
+function _ZN66recorridoNoCubiertoTEST_viajeConImperfeccionesMayoresAlUmbral_Test8TestBodyEv called 1 returned 100% blocks executed 47%
+        1:   60:TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
+        1:   61:    viaje v = {};
+        1:   61-block  0
+call    0 returned 1
+        1:   62:    vector<int> desvios(R.size(), 0);
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   62-block  0
+call    5 returned 1
+    $$$$$:   62-block  1
+    $$$$$:   62-block  2
+        1:   63:    desvios[0] = 390;
+call    0 returned 1
+        1:   64:    desvios[1] = 30;
+call    0 returned 1
+        1:   65:    desvios[2] = -190;
+call    0 returned 1
+        1:   66:    desvios[3] = -390;
+call    0 returned 1
+        -:   67:
+       11:   68:    for(int i = 0; i < R.size(); i++){
+       11:   68-block  0
+call    0 returned 11
+branch  1 taken 10
+branch  2 taken 1 (fallthrough)
+       10:   69:        v.push_back(medicion(i, desviarPunto(R[i], 0, desvios[i])));
+       10:   69-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 10 (fallthrough)
+branch  4 taken 0 (throw)
+       10:   69-block  1
+call    5 returned 10
+branch  6 taken 10 (fallthrough)
+branch  7 taken 0 (throw)
+       10:   69-block  2
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   69-block  3
+    $$$$$:   69-block  4
+    $$$$$:   69-block  5
+        -:   70:    }
+        -:   71:
+        2:   72:    vector<gps> res = recorridoNoCubierto(v, R, 0.1);
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   72-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+    $$$$$:   72-block  3
+    $$$$$:   72-block  4
+       1*:   73:    EXPECT_EQ(res.size(), 3);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   73-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   73-block  1
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   73-block  2
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   73-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   73-block  4
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   73-block  5
+call   19 never executed
+call   20 never executed
+        1:   73-block  6
+call   21 returned 1
+    $$$$$:   73-block  7
+    $$$$$:   73-block  8
+    $$$$$:   73-block  9
+call   22 never executed
+    $$$$$:   73-block 10
+    $$$$$:   73-block 11
+call   23 never executed
+    $$$$$:   73-block 12
+    $$$$$:   73-block 13
+call   24 never executed
+        1:   74:    ASSERT_ELEMENTS(res, {R[3], R[0], R[2]});
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   74-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   74-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   74-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    $$$$$:   74-block  3
+call   16 never executed
+    $$$$$:   74-block  4
+    $$$$$:   74-block  5
+call   17 never executed
+    $$$$$:   74-block  6
+    $$$$$:   74-block  7
+call   18 never executed
+    $$$$$:   74-block  8
+    $$$$$:   74-block  9
+        -:   75:
+        1:   76:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   76-block  0
+call    3 never executed
+    $$$$$:   76-block  1
+call    4 never executed
+    $$$$$:   76-block  2
+call    5 never executed
+------------------
+_ZN66recorridoNoCubiertoTEST_viajeConImperfeccionesMayoresAlUmbral_TestC1Ev:
+function _ZN66recorridoNoCubiertoTEST_viajeConImperfeccionesMayoresAlUmbral_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   60:TEST(recorridoNoCubiertoTEST, viajeConImperfeccionesMayoresAlUmbral){
+        1:   60-block  0
+call    0 returned 1
+------------------
+        -:   77:
+        -:   78:
+        -:   79:

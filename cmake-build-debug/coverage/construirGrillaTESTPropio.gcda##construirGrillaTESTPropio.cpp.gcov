@@ -1,0 +1,635 @@
+        -:    0:Source:C:/Users/melia/CLionProjects/TPI-AyED1/testGrupo/construirGrillaTESTPropio.cpp
+        -:    0:Graph:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\construirGrillaTESTPropio.gcno
+        -:    0:Data:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\construirGrillaTESTPropio.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        2:    8:TEST(construirGrillaTESTpropio,nombresIncorrectosNParMImpar){  // Los nombres son incorrectos porque g es igual a gres invertida
+        1:    9:    int n = 2;
+        1:   10:    int m = 3;
+        -:   11:
+        1:   12:    gps esq1 = puntoGps(-33.0,-58.0);
+        1:   13:    gps esq2 = puntoGps(-33.9,-57.1);
+        -:   14:
+        -:   15:
+        1:   16:    grilla gres = {make_tuple(puntoGps(-33.0,-58.0), puntoGps(-33.45,-57.7), make_tuple(1,1)),
+        1:   17:                   make_tuple(puntoGps(-33.0,-57.7), puntoGps(-33.45,-57.4), make_tuple(1,2)),
+        1:   18:                   make_tuple(puntoGps(-33.0,-57.4), puntoGps(-33.45,-57.1), make_tuple(1,3)),
+        1:   19:                   make_tuple(puntoGps(-33.45,-58.0), puntoGps(-33.9,-57.7), make_tuple(2,1)),
+        1:   20:                   make_tuple(puntoGps(-33.45,-57.7), puntoGps(-33.9,-57.4), make_tuple(2,2)),
+        1:   21:                   make_tuple(puntoGps(-33.45,-57.4), puntoGps(-33.9,-57.1), make_tuple(2,3))
+        6:   22:    };
+        -:   23:
+        1:   24:    grilla g = construirGrilla(esq2,esq1,n,m);
+        1:   25:    int i = 0;
+       1*:   26:    EXPECT_EQ(get<0>(g[i]), get<1>(gres[gres.size()  - i - 1]));
+       1*:   27:    EXPECT_EQ(get<1>(g[i]), get<0>(gres[gres.size()  - i - 1]));
+        -:   28:
+        1:   29:}
+------------------
+_ZN59construirGrillaTESTpropio_nombresIncorrectosNParMImpar_Test8TestBodyEv:
+function _ZN59construirGrillaTESTpropio_nombresIncorrectosNParMImpar_Test8TestBodyEv called 1 returned 100% blocks executed 34%
+        1:    8:TEST(construirGrillaTESTpropio,nombresIncorrectosNParMImpar){  // Los nombres son incorrectos porque g es igual a gres invertida
+        1:    9:    int n = 2;
+        1:   10:    int m = 3;
+        -:   11:
+        1:   12:    gps esq1 = puntoGps(-33.0,-58.0);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:    gps esq2 = puntoGps(-33.9,-57.1);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   14:
+        -:   15:
+        1:   16:    grilla gres = {make_tuple(puntoGps(-33.0,-58.0), puntoGps(-33.45,-57.7), make_tuple(1,1)),
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   16-block  3
+    $$$$$:   16-block  4
+    $$$$$:   16-block  5
+    $$$$$:   16-block  6
+    $$$$$:   16-block  7
+        1:   17:                   make_tuple(puntoGps(-33.0,-57.7), puntoGps(-33.45,-57.4), make_tuple(1,2)),
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   17-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   17-block  3
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+    $$$$$:   17-block  6
+    $$$$$:   17-block  7
+        1:   18:                   make_tuple(puntoGps(-33.0,-57.4), puntoGps(-33.45,-57.1), make_tuple(1,3)),
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   18-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   18-block  3
+    $$$$$:   18-block  4
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+        1:   19:                   make_tuple(puntoGps(-33.45,-58.0), puntoGps(-33.9,-57.7), make_tuple(2,1)),
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   19-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   19-block  3
+    $$$$$:   19-block  4
+    $$$$$:   19-block  5
+    $$$$$:   19-block  6
+    $$$$$:   19-block  7
+        1:   20:                   make_tuple(puntoGps(-33.45,-57.7), puntoGps(-33.9,-57.4), make_tuple(2,2)),
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   20-block  3
+    $$$$$:   20-block  4
+    $$$$$:   20-block  5
+    $$$$$:   20-block  6
+    $$$$$:   20-block  7
+        1:   21:                   make_tuple(puntoGps(-33.45,-57.4), puntoGps(-33.9,-57.1), make_tuple(2,3))
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   21-block  3
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+        6:   22:    };
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   22-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   22-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   22-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   22-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   22-block  6
+call   18 returned 1
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+    $$$$$:   22-block  7
+    $$$$$:   22-block  8
+        -:   23:
+        1:   24:    grilla g = construirGrilla(esq2,esq1,n,m);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:    int i = 0;
+       1*:   26:    EXPECT_EQ(get<0>(g[i]), get<1>(gres[gres.size()  - i - 1]));
+        1:   26-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   26-block  1
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   26-block  2
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   26-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   26-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   26-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   26-block  6
+call   23 never executed
+call   24 never executed
+        1:   26-block  7
+call   25 returned 1
+    $$$$$:   26-block  8
+call   26 never executed
+    $$$$$:   26-block  9
+    $$$$$:   26-block 10
+call   27 never executed
+    $$$$$:   26-block 11
+    $$$$$:   26-block 12
+call   28 never executed
+       1*:   27:    EXPECT_EQ(get<1>(g[i]), get<0>(gres[gres.size()  - i - 1]));
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   27-block  0
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   27-block  1
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   27-block  2
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   27-block  3
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   27-block  4
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   27-block  5
+call   23 never executed
+call   24 never executed
+        1:   27-block  6
+call   25 returned 1
+    $$$$$:   27-block  7
+call   26 never executed
+    $$$$$:   27-block  8
+    $$$$$:   27-block  9
+call   27 never executed
+    $$$$$:   27-block 10
+    $$$$$:   27-block 11
+call   28 never executed
+        -:   28:
+        1:   29:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   29-block  0
+call    2 never executed
+    $$$$$:   29-block  1
+call    3 never executed
+------------------
+_ZN59construirGrillaTESTpropio_nombresIncorrectosNParMImpar_TestC1Ev:
+function _ZN59construirGrillaTESTpropio_nombresIncorrectosNParMImpar_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(construirGrillaTESTpropio,nombresIncorrectosNParMImpar){  // Los nombres son incorrectos porque g es igual a gres invertida
+        1:    8-block  0
+call    0 returned 1
+------------------
+        -:   30:
+        2:   31:TEST(construirGrillaTESTpropio, nombresIncorrectosNParMPar){
+        1:   32:    int n = 2;
+        1:   33:    int m = 4;
+        -:   34:
+        -:   35:
+        1:   36:    gps esq1 = puntoGps(-33.0,-58.0);
+        1:   37:    gps esq2 = puntoGps(-33.9,-57.1);
+        -:   38:
+        -:   39:
+        1:   40:    grilla gres = {make_tuple(puntoGps(-33.0,-58.0), puntoGps(-33.45,-57.775), make_tuple(1,1)),
+        1:   41:                   make_tuple(puntoGps(-33.0,-57.775), puntoGps(-33.45,-57.55), make_tuple(1,2)),
+        1:   42:                   make_tuple(puntoGps(-33.0,-57.55), puntoGps(-33.45,-57.325), make_tuple(1,3)),
+        1:   43:                   make_tuple(puntoGps(-33.0,-57.325), puntoGps(-33.45,-57.1), make_tuple(1,4)),
+        1:   44:                   make_tuple(puntoGps(-33.45,-58.0), puntoGps(-33.9,-57.775), make_tuple(2,1)),
+        1:   45:                   make_tuple(puntoGps(-33.45,-57.775), puntoGps(-33.9,-57.55), make_tuple(2,2)),
+        1:   46:                   make_tuple(puntoGps(-33.45,-57.55), puntoGps(-33.9,-57.325), make_tuple(2,3)),
+        1:   47:                   make_tuple(puntoGps(-33.45,-57.325), puntoGps(-33.9,-57.1), make_tuple(2,4))
+        8:   48:    };
+        -:   49:
+        1:   50:    grilla g = construirGrilla(esq2,esq1,n,m);
+        1:   51:    int i = g.size() -1;
+       1*:   52:    EXPECT_EQ(get<0>(g[i]), get<1>(gres[gres.size()  - i - 1]));
+       1*:   53:    EXPECT_EQ(get<1>(g[i]), get<0>(gres[gres.size()  - i - 1]));
+        -:   54:
+        1:   55:}
+------------------
+_ZN57construirGrillaTESTpropio_nombresIncorrectosNParMPar_Test8TestBodyEv:
+function _ZN57construirGrillaTESTpropio_nombresIncorrectosNParMPar_Test8TestBodyEv called 1 returned 100% blocks executed 33%
+        1:   31:TEST(construirGrillaTESTpropio, nombresIncorrectosNParMPar){
+        1:   32:    int n = 2;
+        1:   33:    int m = 4;
+        -:   34:
+        -:   35:
+        1:   36:    gps esq1 = puntoGps(-33.0,-58.0);
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37:    gps esq2 = puntoGps(-33.9,-57.1);
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   38:
+        -:   39:
+        1:   40:    grilla gres = {make_tuple(puntoGps(-33.0,-58.0), puntoGps(-33.45,-57.775), make_tuple(1,1)),
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   40-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   40-block  3
+    $$$$$:   40-block  4
+    $$$$$:   40-block  5
+    $$$$$:   40-block  6
+    $$$$$:   40-block  7
+        1:   41:                   make_tuple(puntoGps(-33.0,-57.775), puntoGps(-33.45,-57.55), make_tuple(1,2)),
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   41-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   41-block  3
+    $$$$$:   41-block  4
+    $$$$$:   41-block  5
+    $$$$$:   41-block  6
+    $$$$$:   41-block  7
+        1:   42:                   make_tuple(puntoGps(-33.0,-57.55), puntoGps(-33.45,-57.325), make_tuple(1,3)),
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   42-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   42-block  3
+    $$$$$:   42-block  4
+    $$$$$:   42-block  5
+    $$$$$:   42-block  6
+    $$$$$:   42-block  7
+        1:   43:                   make_tuple(puntoGps(-33.0,-57.325), puntoGps(-33.45,-57.1), make_tuple(1,4)),
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   43-block  3
+    $$$$$:   43-block  4
+    $$$$$:   43-block  5
+    $$$$$:   43-block  6
+    $$$$$:   43-block  7
+        1:   44:                   make_tuple(puntoGps(-33.45,-58.0), puntoGps(-33.9,-57.775), make_tuple(2,1)),
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   44-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   44-block  3
+    $$$$$:   44-block  4
+    $$$$$:   44-block  5
+    $$$$$:   44-block  6
+    $$$$$:   44-block  7
+        1:   45:                   make_tuple(puntoGps(-33.45,-57.775), puntoGps(-33.9,-57.55), make_tuple(2,2)),
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+    $$$$$:   45-block  6
+    $$$$$:   45-block  7
+        1:   46:                   make_tuple(puntoGps(-33.45,-57.55), puntoGps(-33.9,-57.325), make_tuple(2,3)),
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   46-block  3
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+    $$$$$:   46-block  7
+        1:   47:                   make_tuple(puntoGps(-33.45,-57.325), puntoGps(-33.9,-57.1), make_tuple(2,4))
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   47-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:   47-block  3
+    $$$$$:   47-block  4
+    $$$$$:   47-block  5
+    $$$$$:   47-block  6
+    $$$$$:   47-block  7
+        8:   48:    };
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   48-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   48-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   48-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   48-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   48-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   48-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   48-block  8
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+    $$$$$:   48-block  9
+    $$$$$:   48-block 10
+        -:   49:
+        1:   50:    grilla g = construirGrilla(esq2,esq1,n,m);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51:    int i = g.size() -1;
+        1:   51-block  0
+call    0 returned 1
+       1*:   52:    EXPECT_EQ(get<0>(g[i]), get<1>(gres[gres.size()  - i - 1]));
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   52-block  0
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   52-block  1
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   52-block  2
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   52-block  3
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   52-block  4
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   52-block  5
+call   23 never executed
+call   24 never executed
+        1:   52-block  6
+call   25 returned 1
+    $$$$$:   52-block  7
+call   26 never executed
+    $$$$$:   52-block  8
+    $$$$$:   52-block  9
+call   27 never executed
+    $$$$$:   52-block 10
+    $$$$$:   52-block 11
+call   28 never executed
+       1*:   53:    EXPECT_EQ(get<1>(g[i]), get<0>(gres[gres.size()  - i - 1]));
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   53-block  0
+call    8 returned 1
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   53-block  1
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   53-block  2
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   53-block  3
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   53-block  4
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   53-block  5
+call   23 never executed
+call   24 never executed
+        1:   53-block  6
+call   25 returned 1
+    $$$$$:   53-block  7
+call   26 never executed
+    $$$$$:   53-block  8
+    $$$$$:   53-block  9
+call   27 never executed
+    $$$$$:   53-block 10
+    $$$$$:   53-block 11
+call   28 never executed
+        -:   54:
+        1:   55:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   55-block  0
+call    2 never executed
+    $$$$$:   55-block  1
+call    3 never executed
+------------------
+_ZN57construirGrillaTESTpropio_nombresIncorrectosNParMPar_TestC1Ev:
+function _ZN57construirGrillaTESTpropio_nombresIncorrectosNParMPar_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   31:TEST(construirGrillaTESTpropio, nombresIncorrectosNParMPar){
+        1:   31-block  0
+call    0 returned 1
+------------------

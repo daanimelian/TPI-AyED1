@@ -1,0 +1,139 @@
+        -:    0:Source:C:/Users/melia/CLionProjects/TPI-AyED1/testGrupo/cantidadDeSaltosTESTPropio.cpp
+        -:    0:Graph:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\cantidadDeSaltosTESTPropio.gcno
+        -:    0:Data:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\cantidadDeSaltosTESTPropio.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        2:    7:TEST(cantidadDeSaltosTEST, sinSaltos){
+        1:    8:grilla g = construirGrilla(puntoGps(180.0,0.0),puntoGps(0.0,90), 1, 2);
+        -:    9:
+        1:   10:gps p1 = puntoGps(0, 0);
+        1:   11:gps p2 = puntoGps(180, 90);
+        -:   12:
+        -:   13:viaje v = {medicion(1.5, p1),
+        1:   14:           medicion(1.6, p2)};
+        -:   15:
+       1*:   16:EXPECT_EQ(cantidadDeSaltos(g,v),0);
+        1:   17:}
+------------------
+_ZN35cantidadDeSaltosTEST_sinSaltos_Test8TestBodyEv:
+function _ZN35cantidadDeSaltosTEST_sinSaltos_Test8TestBodyEv called 1 returned 100% blocks executed 37%
+        1:    7:TEST(cantidadDeSaltosTEST, sinSaltos){
+        1:    8:grilla g = construirGrilla(puntoGps(180.0,0.0),puntoGps(0.0,90), 1, 2);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    8-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:    8-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:    8-block  3
+    $$$$$:    8-block  4
+        -:    9:
+        1:   10:gps p1 = puntoGps(0, 0);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:gps p2 = puntoGps(180, 90);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+        -:   13:viaje v = {medicion(1.5, p1),
+        1:   14:           medicion(1.6, p2)};
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   14-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+    $$$$$:   14-block  3
+    $$$$$:   14-block  4
+        -:   15:
+       1*:   16:EXPECT_EQ(cantidadDeSaltos(g,v),0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   16-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   16-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:   16-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   16-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   16-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   16-block  7
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   16-block  8
+call   29 never executed
+call   30 never executed
+        1:   16-block  9
+call   31 returned 1
+    $$$$$:   16-block 10
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+    $$$$$:   16-block 13
+    $$$$$:   16-block 14
+call   32 never executed
+    $$$$$:   16-block 15
+    $$$$$:   16-block 16
+call   33 never executed
+    $$$$$:   16-block 17
+    $$$$$:   16-block 18
+call   34 never executed
+        1:   17:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   17-block  0
+call    2 never executed
+    $$$$$:   17-block  1
+call    3 never executed
+------------------
+_ZN35cantidadDeSaltosTEST_sinSaltos_TestC1Ev:
+function _ZN35cantidadDeSaltosTEST_sinSaltos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    7:TEST(cantidadDeSaltosTEST, sinSaltos){
+        1:    7-block  0
+call    0 returned 1
+------------------

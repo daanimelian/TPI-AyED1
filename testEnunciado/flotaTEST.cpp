@@ -25,17 +25,3 @@ TEST(flotaTotalTEST, todosAntesDeFranja){
 TEST(flotaTotalTEST, AlgunosAdentro){
     EXPECT_EQ(flota(f, 1.8,2.55),2);
 }
-
-TEST(flotaTotalTEST, todosDespuesDeFranja){
-    EXPECT_EQ(flota(f, 0.0, 0.4), 0);
-}
-
-TEST(flotaTotalTEST, unoEnFranja){
-    EXPECT_EQ(flota(f, 2.0, 2.5), 1);
-}
-
-TEST(flotaTotalTEST, igualAFranja){
-    EXPECT_EQ(flota(f, 1.5, 1.9), 1);
-    EXPECT_EQ(flota(f, 1.5, 2.0), 1);
-    EXPECT_EQ(flota(f, 2.0, 2.7), 1);
-}

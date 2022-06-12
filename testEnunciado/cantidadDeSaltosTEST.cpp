@@ -6,7 +6,7 @@ using namespace std;
 
 
 TEST(cantidadDeSaltosTEST, todosSaltosOrdenados){
-    grilla g = construirGrilla(puntoGps(0.0,0.0),desviarPunto(puntoGps(0,0), 3000, 3000), 6, 6);
+    grilla g = construirGrilla(puntoGps(0.026963706850579118,0.0), puntoGps(0.0, 0.026963706850579118), 6, 6);
 
     gps p1 = puntoGps(0, 0);
     gps p2 = desviarPunto(p1, 2000, 2000);
@@ -18,4 +18,5 @@ TEST(cantidadDeSaltosTEST, todosSaltosOrdenados){
 
     EXPECT_EQ(cantidadDeSaltos(g,v),2);
 }
+
 

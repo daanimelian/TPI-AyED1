@@ -1,0 +1,431 @@
+        -:    0:Source:C:/Users/melia/CLionProjects/TPI-AyED1/testGrupo/corregirViajeTESTPropio.cpp
+        -:    0:Graph:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\corregirViajeTESTPropio.gcno
+        -:    0:Data:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\corregirViajeTESTPropio.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        2:    8:TEST(corregirViajeTEST, faltaElPrimeroYUnIntermedio){
+        1:    9:    viaje v = {medicion(0, puntoGps(0.0, 0.0)),
+        1:   10:               medicion(10, puntoGps(10.1, 20.1)),
+        1:   11:               medicion(20, puntoGps(10.2, 20.2)),
+        1:   12:               medicion(30, puntoGps(10.3, 20.3)),
+        1:   13:               medicion(40, puntoGps(0.0, 0.0)),
+        5:   14:               medicion(50, puntoGps(10.5, 20.5))};
+        -:   15:
+        1:   16:    viaje res = {medicion(0, puntoGps(10.0, 20.0)),
+        1:   17:                 medicion(10, puntoGps(10.1, 20.1)),
+        1:   18:                 medicion(20, puntoGps(10.2, 20.2)),
+        1:   19:                 medicion(30, puntoGps(10.3, 20.3)),
+        1:   20:                 medicion(40, puntoGps(10.4, 20.4)),
+        5:   21:                 medicion(50, puntoGps(10.5, 20.5))};
+        1:   22:    vector<tiempo> errores = {0, 40};
+        -:   23:
+        1:   24:    corregirViaje(v, errores);
+       1*:   25:    EXPECT_EQ(v.size(),res.size());
+        -:   26:
+        7:   27:    for (int i = 0; i < res.size(); ++i) {
+       6*:   28:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+        6:   29:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+       6*:   30:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+        6:   31:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+       6*:   32:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+        -:   33:    }
+        1:   34:}
+------------------
+_ZN50corregirViajeTEST_faltaElPrimeroYUnIntermedio_Test8TestBodyEv:
+function _ZN50corregirViajeTEST_faltaElPrimeroYUnIntermedio_Test8TestBodyEv called 1 returned 100% blocks executed 38%
+        1:    8:TEST(corregirViajeTEST, faltaElPrimeroYUnIntermedio){
+        1:    9:    viaje v = {medicion(0, puntoGps(0.0, 0.0)),
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:    9-block  1
+        1:   10:               medicion(10, puntoGps(10.1, 20.1)),
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   10-block  1
+        1:   11:               medicion(20, puntoGps(10.2, 20.2)),
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   11-block  1
+        1:   12:               medicion(30, puntoGps(10.3, 20.3)),
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   12-block  1
+        1:   13:               medicion(40, puntoGps(0.0, 0.0)),
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   13-block  1
+        5:   14:               medicion(50, puntoGps(10.5, 20.5))};
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   14-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   14-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   14-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   14-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   14-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   14-block  7
+call   21 returned 1
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0 (throw)
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+        -:   15:
+        1:   16:    viaje res = {medicion(0, puntoGps(10.0, 20.0)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   16-block  0
+        1:   17:                 medicion(10, puntoGps(10.1, 20.1)),
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   17-block  1
+        1:   18:                 medicion(20, puntoGps(10.2, 20.2)),
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   18-block  1
+        1:   19:                 medicion(30, puntoGps(10.3, 20.3)),
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   19-block  1
+        1:   20:                 medicion(40, puntoGps(10.4, 20.4)),
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   20-block  1
+        5:   21:                 medicion(50, puntoGps(10.5, 20.5))};
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   21-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   21-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   21-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   21-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   21-block  7
+call   21 returned 1
+call   22 returned 1
+branch 23 taken 1 (fallthrough)
+branch 24 taken 0 (throw)
+    $$$$$:   21-block  8
+    $$$$$:   21-block  9
+    $$$$$:   21-block 10
+        1:   22:    vector<tiempo> errores = {0, 40};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   22-block  0
+    $$$$$:   22-block  1
+        -:   23:
+        1:   24:    corregirViaje(v, errores);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  1
+call    6 returned 1
+    $$$$$:   24-block  2
+call    7 never executed
+    $$$$$:   24-block  3
+       1*:   25:    EXPECT_EQ(v.size(),res.size());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   25-block  0
+call    5 returned 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   25-block  1
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   25-block  2
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   25-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   25-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   25-block  5
+call   20 never executed
+call   21 never executed
+        1:   25-block  6
+call   22 returned 1
+    $$$$$:   25-block  7
+    $$$$$:   25-block  8
+    $$$$$:   25-block  9
+call   23 never executed
+    $$$$$:   25-block 10
+    $$$$$:   25-block 11
+call   24 never executed
+    $$$$$:   25-block 12
+    $$$$$:   25-block 13
+call   25 never executed
+        -:   26:
+        7:   27:    for (int i = 0; i < res.size(); ++i) {
+        7:   27-block  0
+call    0 returned 7
+branch  1 taken 6
+branch  2 taken 1 (fallthrough)
+       6*:   28:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+        6:   28-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   28-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   28-block  2
+call    7 returned 6
+call    8 returned 6
+branch  9 taken 6 (fallthrough)
+branch 10 taken 0 (throw)
+        6:   28-block  3
+call   11 returned 6
+branch 12 taken 6 (fallthrough)
+branch 13 taken 0 (throw)
+        6:   28-block  4
+call   14 returned 6
+branch 15 taken 6 (fallthrough)
+branch 16 taken 0 (throw)
+        6:   28-block  5
+call   17 returned 6
+branch 18 taken 0 (fallthrough)
+branch 19 taken 6
+    %%%%%:   28-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   28-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   28-block  8
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   28-block  9
+call   29 never executed
+branch 30 never executed
+branch 31 never executed
+    %%%%%:   28-block 10
+call   32 never executed
+call   33 never executed
+    $$$$$:   28-block 11
+    $$$$$:   28-block 12
+    $$$$$:   28-block 13
+call   34 never executed
+    $$$$$:   28-block 14
+    $$$$$:   28-block 15
+call   35 never executed
+    $$$$$:   28-block 16
+        6:   29:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+        6:   29-block  0
+call    0 returned 6
+    $$$$$:   29-block  1
+call    1 never executed
+       6*:   30:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   30-block  0
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   30-block  1
+call    7 returned 6
+call    8 returned 6
+branch  9 taken 6 (fallthrough)
+branch 10 taken 0 (throw)
+        6:   30-block  2
+call   11 returned 6
+branch 12 taken 6 (fallthrough)
+branch 13 taken 0 (throw)
+        6:   30-block  3
+call   14 returned 6
+branch 15 taken 6 (fallthrough)
+branch 16 taken 0 (throw)
+        6:   30-block  4
+call   17 returned 6
+branch 18 taken 0 (fallthrough)
+branch 19 taken 6
+    %%%%%:   30-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   30-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   30-block  7
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   30-block  8
+call   29 never executed
+branch 30 never executed
+branch 31 never executed
+    %%%%%:   30-block  9
+call   32 never executed
+call   33 never executed
+    $$$$$:   30-block 10
+    $$$$$:   30-block 11
+    $$$$$:   30-block 12
+call   34 never executed
+    $$$$$:   30-block 13
+    $$$$$:   30-block 14
+call   35 never executed
+    $$$$$:   30-block 15
+        6:   31:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+        6:   31-block  0
+call    0 returned 6
+    $$$$$:   31-block  1
+call    1 never executed
+       6*:   32:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   32-block  0
+call    4 returned 6
+call    5 returned 6
+branch  6 taken 6 (fallthrough)
+branch  7 taken 0 (throw)
+        6:   32-block  1
+call    8 returned 6
+branch  9 taken 6 (fallthrough)
+branch 10 taken 0 (throw)
+        6:   32-block  2
+call   11 returned 6
+branch 12 taken 0 (fallthrough)
+branch 13 taken 6
+    %%%%%:   32-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   32-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   32-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   32-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   32-block  7
+call   26 never executed
+call   27 never executed
+        6:   32-block  8
+call   28 returned 6
+    $$$$$:   32-block  9
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+call   29 never executed
+    $$$$$:   32-block 12
+    $$$$$:   32-block 13
+call   30 never executed
+    $$$$$:   32-block 14
+    $$$$$:   32-block 15
+call   31 never executed
+        -:   33:    }
+        1:   34:}
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   34-block  1
+call    3 never executed
+    $$$$$:   34-block  2
+call    4 never executed
+    $$$$$:   34-block  3
+call    5 never executed
+------------------
+_ZN50corregirViajeTEST_faltaElPrimeroYUnIntermedio_TestC1Ev:
+function _ZN50corregirViajeTEST_faltaElPrimeroYUnIntermedio_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(corregirViajeTEST, faltaElPrimeroYUnIntermedio){
+        1:    8-block  0
+call    0 returned 1
+------------------
+        -:   35:
+        -:   36:

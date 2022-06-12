@@ -69,7 +69,7 @@ tuple<tiempo, gps> medicion(tiempo t, gps g) {
     return make_tuple(t, g);
 }
 
-/*void guardarGrillaEnArchivo(grilla g, string nombreArchivo){
+void guardarGrillaEnArchivo(grilla g, string nombreArchivo){
     ofstream myfile;
     float esq1_lat, esq2_lat, esq1_lng, esq2_lng;
     int name_0, name_1;
@@ -116,7 +116,7 @@ void guardarRecorridosEnArchivo(vector<recorrido> recorridos, string nombreArchi
     }
     myfile.close();
 
-}*/
+}
 tiempo maxTiempo (viaje v){
     tiempo res = obtenerTiempo(v[0]);
     int i = 1;
@@ -221,7 +221,6 @@ bool viajeEnFranjaHoraria(viaje v, tiempo t0, tiempo tf){
     return res;
 }
 
-//ejercicio 8
 
 int puntoACorregir(viaje v, tiempo error){
     int i = 0;

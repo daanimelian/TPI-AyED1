@@ -1,0 +1,301 @@
+        -:    0:Source:C:/Users/melia/CLionProjects/TPI-AyED1/testGrupo/recorridoNoCubiertoTESTPropio.cpp
+        -:    0:Graph:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\recorridoNoCubiertoTESTPropio.gcno
+        -:    0:Data:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\recorridoNoCubiertoTESTPropio.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:template<typename T>
+function _Z8includedISt5tupleIJddEEEbT_St6vectorIS2_SaIS2_EE called 0 returned 0% blocks executed 0%
+    #####:    6:bool included(T elem, vector<T> container){
+    #####:    7:    for (int i = 0; i < container.size(); ++i) {
+    %%%%%:    7-block  0
+    %%%%%:    7-block  1
+    %%%%%:    7-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:    8:        if (container[i] == elem){return true;}
+    %%%%%:    8-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:    8-block  1
+        -:    9:    }
+    #####:   10:    return false;
+    %%%%%:   10-block  0
+        -:   11:}
+        -:   12:
+        -:   13:template<typename T>
+function _Z15ASSERT_ELEMENTSISt5tupleIJddEEEvSt6vectorIT_SaIS3_EES5_ called 0 returned 0% blocks executed 0%
+    #####:   14:void ASSERT_ELEMENTS(vector<T> container, vector<T> elems) {
+    #####:   15:    for(int i = 0; i < elems.size(); i++ ) {
+    %%%%%:   15-block  0
+    %%%%%:   15-block  1
+    %%%%%:   15-block  2
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   16:        ASSERT_TRUE(included(elems[i], container));
+    %%%%%:   16-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   16-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   16-block  2
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   16-block  3
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   16-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   16-block  5
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   16-block  6
+call   20 never executed
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   16-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   16-block  8
+call   27 never executed
+call   28 never executed
+call   29 never executed
+    %%%%%:   16-block  9
+    %%%%%:   16-block 10
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    $$$$$:   16-block 11
+    $$$$$:   16-block 12
+    $$$$$:   16-block 13
+call   33 never executed
+    $$$$$:   16-block 14
+    $$$$$:   16-block 15
+call   34 never executed
+    $$$$$:   16-block 16
+    $$$$$:   16-block 17
+call   35 never executed
+    $$$$$:   16-block 18
+    $$$$$:   16-block 19
+call   36 never executed
+        -:   17:    }
+        -:   18:
+        -:   19:}
+        -:   20:
+        -:   21:using namespace std;
+        -:   22:
+        -:   23:const gps P = puntoGps(-31.465027, -64.212973);
+        -:   24:const recorrido R = {P,
+        -:   25:                     desviarPunto(P, 1000, 0),
+        -:   26:                     desviarPunto(P, 2000, 0),
+        -:   27:                     desviarPunto(P, 3000, 0),
+        -:   28:                     desviarPunto(P, 4000, 0),
+        -:   29:                     desviarPunto(P, 5000, 0),
+        -:   30:                     desviarPunto(P, 6000, 0),
+        -:   31:                     desviarPunto(P, 7000, 0),
+        -:   32:                     desviarPunto(P, 8000, 0),
+        -:   33:                     desviarPunto(P, 9000, 0),
+        -:   34:                      };
+        -:   35:
+        -:   36:const recorrido RRulos = {P,
+        -:   37:                         desviarPunto(P, 1000, 0),
+        -:   38:                         desviarPunto(P, 2000, 0),
+        -:   39:                         desviarPunto(P, 3000, 0),
+        -:   40:                         desviarPunto(P, 4000, 0),
+        -:   41:                         desviarPunto(P, 5000, 0),
+        -:   42:                         desviarPunto(P, 5000, 100),
+        -:   43:                         desviarPunto(P, 4000, 100),
+        -:   44:                         desviarPunto(P, 3000, 100),
+        -:   45:                         desviarPunto(P, 2000, 100),
+        -:   46:                         desviarPunto(P, 1000, 100),
+        -:   47:                         desviarPunto(P, 0, 0)
+        -:   48:};
+        -:   49:
+        -:   50:
+        2:   51:TEST(recorridoNoCubiertoTEST, viajeConImperfeccionIgualAlUmbral){
+        1:   52:    viaje v = {};
+        1:   53:    const recorrido R_2 = {P};
+        -:   54:
+        -:   55:
+        2:   56:    for(int i = 0; i < R_2.size(); i++){
+        1:   57:        v.push_back(medicion(i, desviarPunto(R[i], 0, 2000)));
+        -:   58:    }
+        -:   59:
+        2:   60:    vector<gps> res = recorridoNoCubierto(v, R_2, distEnKM(obtenerPosicion(v[0]), R_2[0]));
+       1*:   61:    EXPECT_EQ(res.size(), 1);
+        1:   62:    ASSERT_ELEMENTS(res, {R_2[0]});
+        -:   63:
+        1:   64:}
+------------------
+_ZN62recorridoNoCubiertoTEST_viajeConImperfeccionIgualAlUmbral_Test8TestBodyEv:
+function _ZN62recorridoNoCubiertoTEST_viajeConImperfeccionIgualAlUmbral_Test8TestBodyEv called 1 returned 100% blocks executed 43%
+        1:   51:TEST(recorridoNoCubiertoTEST, viajeConImperfeccionIgualAlUmbral){
+        1:   52:    viaje v = {};
+        1:   52-block  0
+call    0 returned 1
+        1:   53:    const recorrido R_2 = {P};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   53-block  0
+    $$$$$:   53-block  1
+        -:   54:
+        -:   55:
+        2:   56:    for(int i = 0; i < R_2.size(); i++){
+        2:   56-block  0
+call    0 returned 2
+branch  1 taken 1
+branch  2 taken 1 (fallthrough)
+        1:   57:        v.push_back(medicion(i, desviarPunto(R[i], 0, 2000)));
+        1:   57-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   57-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   57-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   57-block  3
+    $$$$$:   57-block  4
+    $$$$$:   57-block  5
+        -:   58:    }
+        -:   59:
+        2:   60:    vector<gps> res = recorridoNoCubierto(v, R_2, distEnKM(obtenerPosicion(v[0]), R_2[0]));
+        1:   60-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   60-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   60-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   60-block  3
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:   60-block  4
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+call   17 returned 1
+    $$$$$:   60-block  5
+    $$$$$:   60-block  6
+    $$$$$:   60-block  7
+       1*:   61:    EXPECT_EQ(res.size(), 1);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   61-block  0
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   61-block  1
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+    %%%%%:   61-block  2
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    %%%%%:   61-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   61-block  4
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   61-block  5
+call   19 never executed
+call   20 never executed
+        1:   61-block  6
+call   21 returned 1
+    $$$$$:   61-block  7
+    $$$$$:   61-block  8
+    $$$$$:   61-block  9
+call   22 never executed
+    $$$$$:   61-block 10
+    $$$$$:   61-block 11
+call   23 never executed
+    $$$$$:   61-block 12
+    $$$$$:   61-block 13
+call   24 never executed
+        1:   62:    ASSERT_ELEMENTS(res, {R_2[0]});
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   62-block  0
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   62-block  1
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:   62-block  2
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+    $$$$$:   62-block  3
+call   14 never executed
+    $$$$$:   62-block  4
+    $$$$$:   62-block  5
+call   15 never executed
+    $$$$$:   62-block  6
+    $$$$$:   62-block  7
+call   16 never executed
+    $$$$$:   62-block  8
+    $$$$$:   62-block  9
+        -:   63:
+        1:   64:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   64-block  0
+call    3 never executed
+    $$$$$:   64-block  1
+call    4 never executed
+    $$$$$:   64-block  2
+call    5 never executed
+------------------
+_ZN62recorridoNoCubiertoTEST_viajeConImperfeccionIgualAlUmbral_TestC1Ev:
+function _ZN62recorridoNoCubiertoTEST_viajeConImperfeccionIgualAlUmbral_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   51:TEST(recorridoNoCubiertoTEST, viajeConImperfeccionIgualAlUmbral){
+        1:   51-block  0
+call    0 returned 1
+------------------
+        -:   65:
+        -:   66:

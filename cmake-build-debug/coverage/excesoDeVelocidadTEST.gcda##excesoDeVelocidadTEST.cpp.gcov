@@ -1,0 +1,230 @@
+        -:    0:Source:C:/Users/melia/CLionProjects/TPI-AyED1/testEnunciado/excesoDeVelocidadTEST.cpp
+        -:    0:Graph:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testEnunciado\excesoDeVelocidadTEST.gcno
+        -:    0:Data:C:\Users\melia\CLionProjects\TPI-AyED1\cmake-build-debug\CMakeFiles\tpi.dir\testEnunciado\excesoDeVelocidadTEST.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:const gps P = puntoGps(-33, -34);
+        -:    8:const double unaHora = 3600;
+        -:    9:
+        2:   10:TEST(excesoDeVelocidadTEST, noSuperaLaVelocidad){
+        -:   11:    viaje v = {medicion(0.0, P),
+        1:   12:               medicion(unaHora, desviarPunto(P, 1000, 0)),
+        2:   13:               medicion(unaHora*2, desviarPunto(P, 2000, 0))}; // 1 KM por hora.
+        -:   14:
+       1*:   15:    EXPECT_FALSE(excesoDeVelocidad(v));
+        1:   16:}
+------------------
+_ZN46excesoDeVelocidadTEST_noSuperaLaVelocidad_Test8TestBodyEv:
+function _ZN46excesoDeVelocidadTEST_noSuperaLaVelocidad_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   10:TEST(excesoDeVelocidadTEST, noSuperaLaVelocidad){
+        -:   11:    viaje v = {medicion(0.0, P),
+        1:   12:               medicion(unaHora, desviarPunto(P, 1000, 0)),
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   12-block  1
+        2:   13:               medicion(unaHora*2, desviarPunto(P, 2000, 0))}; // 1 KM por hora.
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   13-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   13-block  4
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+        -:   14:
+       1*:   15:    EXPECT_FALSE(excesoDeVelocidad(v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   15-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   15-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   15-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   15-block  4
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   15-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   15-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   15-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   15-block  8
+call   29 returned 1
+    $$$$$:   15-block  9
+    $$$$$:   15-block 10
+    $$$$$:   15-block 11
+call   30 never executed
+    $$$$$:   15-block 12
+    $$$$$:   15-block 13
+call   31 never executed
+    $$$$$:   15-block 14
+    $$$$$:   15-block 15
+call   32 never executed
+    $$$$$:   15-block 16
+    $$$$$:   15-block 17
+call   33 never executed
+        1:   16:}
+call    0 returned 1
+    $$$$$:   16-block  0
+call    1 never executed
+------------------
+_ZN46excesoDeVelocidadTEST_noSuperaLaVelocidad_TestC1Ev:
+function _ZN46excesoDeVelocidadTEST_noSuperaLaVelocidad_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   10:TEST(excesoDeVelocidadTEST, noSuperaLaVelocidad){
+        1:   10-block  0
+call    0 returned 1
+------------------
+        -:   17:
+        2:   18:TEST(excesoDeVelocidadTEST, superaLaVelocidad){
+        -:   19:    viaje v = {medicion(0.0, P),
+        1:   20:               medicion(unaHora, desviarPunto(P, 100000, 0)),
+        2:   21:               medicion(unaHora*2, desviarPunto(P, 200000, 0))}; // 100 KM por hora.
+        -:   22:
+       1*:   23:    EXPECT_TRUE(excesoDeVelocidad(v));
+        1:   24:}
+------------------
+_ZN44excesoDeVelocidadTEST_superaLaVelocidad_Test8TestBodyEv:
+function _ZN44excesoDeVelocidadTEST_superaLaVelocidad_Test8TestBodyEv called 1 returned 100% blocks executed 32%
+        1:   18:TEST(excesoDeVelocidadTEST, superaLaVelocidad){
+        -:   19:    viaje v = {medicion(0.0, P),
+        1:   20:               medicion(unaHora, desviarPunto(P, 100000, 0)),
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   20-block  1
+        2:   21:               medicion(unaHora*2, desviarPunto(P, 200000, 0))}; // 100 KM por hora.
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   21-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   21-block  4
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+    $$$$$:   21-block  5
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+        -:   22:
+       1*:   23:    EXPECT_TRUE(excesoDeVelocidad(v));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   23-block  3
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   23-block  4
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   23-block  5
+call   19 never executed
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   23-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   23-block  7
+call   26 never executed
+call   27 never executed
+call   28 never executed
+        1:   23-block  8
+call   29 returned 1
+    $$$$$:   23-block  9
+    $$$$$:   23-block 10
+    $$$$$:   23-block 11
+call   30 never executed
+    $$$$$:   23-block 12
+    $$$$$:   23-block 13
+call   31 never executed
+    $$$$$:   23-block 14
+    $$$$$:   23-block 15
+call   32 never executed
+    $$$$$:   23-block 16
+    $$$$$:   23-block 17
+call   33 never executed
+        1:   24:}
+call    0 returned 1
+    $$$$$:   24-block  0
+call    1 never executed
+------------------
+_ZN44excesoDeVelocidadTEST_superaLaVelocidad_TestC1Ev:
+function _ZN44excesoDeVelocidadTEST_superaLaVelocidad_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   18:TEST(excesoDeVelocidadTEST, superaLaVelocidad){
+        1:   18-block  0
+call    0 returned 1
+------------------
